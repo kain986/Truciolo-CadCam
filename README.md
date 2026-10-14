@@ -68,7 +68,7 @@ Il progetto si salva da solo nel browser (anche il modello 3D) e si può esporta
 
 Il programma è una pagina statica:
 
-- **GitHub Pages**: in *Settings → Pages* scegli il ramo `main` e la cartella principale; l'app sarà su `https://kain986.github.io/truciolo-cadcam/`.
+- **GitHub Pages**: in *Settings → Pages* scegli il ramo `main` e la cartella principale; l'app sarà su `https://kain986.github.io/Truciolo-CadCam/`.
 - **In locale**: serve un piccolo server web, perché il motore STEP/IGES si carica come file separato. Ad esempio `python3 -m http.server` nella cartella del progetto, poi apri `http://localhost:8000`.
 
 Serve una connessione a internet solo per la libreria grafica three.js e i caratteri, caricati da CDN.
