@@ -13,9 +13,17 @@ CAD/CAM per fresatrici CNC che funziona interamente nel browser: carichi il pezz
 
 **Pezzo e grezzo**
 - Scelta della faccia d'appoggio cliccando sul modello, rotazioni, scala e conversione da pollici
-- Grezzo a blocco o sagoma da taglio laser, con sovrametallo solo sulle superfici di bordo scelte
+- Sequenza guidata: modello, faccia d'appoggio, zero pezzo (posizione e orientamento), grezzo, sovrametallo in Z, fori e scavi
+- Grezzo a blocco (automatico o a misura) o profilo da taglio laser, con sovrametallo solo sulle superfici di bordo scelte (anche come catene tangenti, profilo aperto o chiuso) e contornatura opzionale
+- Spianatura del sovrametallo in Z, limitata alla sagoma laser
 - 12 materiali (legni, MDF, plastiche, alluminio, ottone, acciai) che guidano i dati di taglio suggeriti
-- Riconoscimento automatico di fori, tasche (anche a gradini e con isole) e ribassi esterni
+
+**Fori e scavi di un pezzo già modellato**
+- Riconoscimento automatico di fori (passanti, ciechi, a punta), tasche (anche a gradini e con isole) e ribassi limitati alla sagoma del pezzo; i fori laterali non vengono scambiati per scavi
+- Con il grezzo laser, fori grandi, scavi passanti e contorno già tagliati vengono esclusi da soli
+- Lista ad albero: geometrie uguali, rami per lavorazione o gruppo, singoli elementi con la loro posizione; selezione multipla e "Gestisci a parte" per lavorare diversamente elementi uguali
+- Cicli in sequenza per ogni foro: punta da centri, preforo, foratura o fresatura elicoidale/tasca, maschiatura (filetti metrici con riconoscimento del preforo)
+- Passando con il cursore su una riga, o su un elemento nel 3D, gli elementi si illuminano
 
 **Disegno 2D**
 - Linee, polilinee, rettangoli con raccordo e cerchi, con aggancio a griglia e ai punti notevoli
@@ -33,6 +41,7 @@ CAD/CAM per fresatrici CNC che funziona interamente nel browser: carichi il pezz
 
 **Simulazione e controlli**
 - Asportazione del materiale sul grezzo, con avviso se un rapido entra nel pezzo
+- Rendering di alta qualità (pulsante HQ): riflessi, ombre, spigoli del modello
 - Simulazione della singola lavorazione, salto tra lavorazioni, clic su una riga del programma per vederla
 - Elenco dei controlli prima dell'invio
 
@@ -40,10 +49,10 @@ CAD/CAM per fresatrici CNC che funziona interamente nel browser: carichi il pezz
 
 | Controllo | Caratteristiche |
 |---|---|
-| GRBL | router hobbistici, pausa M0 al cambio utensile |
-| LinuxCNC / Mach3 | T… M6, G43 H, cicli G81/G83 |
-| Fanuc | `%`, numero O, punto decimale su tutte le quote, G28 al cambio, G43 H, cicli G81/G83 modali |
-| Heidenhain TNC | dialogo in chiaro: BLK FORM, TOOL CALL, L/CC/C, ciclo 200 con M99 |
+| GRBL | router hobbistici, pausa M0 al cambio utensile (maschiatura indicata come commento) |
+| LinuxCNC / Mach3 | T… M6, G43 H, cicli G81/G83, maschiatura G33.1 |
+| Fanuc | `%`, numero O, punto decimale su tutte le quote, G28 al cambio, G43 H, cicli G81/G83 modali, maschiatura rigida M29 G84 |
+| Heidenhain TNC | dialogo in chiaro: BLK FORM, TOOL CALL, L/CC/C, ciclo 200 con M99, maschiatura ciclo 207 |
 
 Per tutti: archi G2/G3 (o CC/C), refrigerante, tempo ciclo stimato.
 
@@ -53,12 +62,12 @@ Per tutti: archi G2/G3 (o CC/C), refrigerante, tempo ciclo stimato.
 
 Il lavoro segue le quattro schede:
 
-1. **Pezzo** – apri il file, scegli la faccia d'appoggio, il materiale e il grezzo. Con un modello 3D puoi far riconoscere fori e tasche.
+1. **Pezzo** – apri il file e segui i passi: faccia d'appoggio, zero pezzo, grezzo, sovrametallo in Z, riconoscimento di fori e scavi.
 2. **Disegno** – disegna o correggi le forme 2D da lavorare.
 3. **Lavorazioni** – imposta gli utensili e la sequenza di lavoro. I valori suggeriti si aggiornano finché non li modifichi.
 4. **Programma** – scegli il controllo, verifica i controlli e scarica il file.
 
-Zero pezzo: X0 Y0 all'angolo anteriore sinistro del grezzo, Z0 sulla faccia superiore.
+Zero pezzo: a scelta tra 9 punti del grezzo (angoli, centri dei lati, centro), con Z0 sopra il grezzo, sopra il pezzo o sul piano d'appoggio, e rotazione degli assi a passi di 90°.
 
 Comandi principali: Ctrl+Z / Ctrl+Y annulla e ripeti, Spazio avvia la simulazione, F adatta la vista, `?` mostra tutti i comandi.
 

@@ -159,6 +159,71 @@ div.tools{border:1px solid var(--line);border-radius:var(--r);background:var(--p
 .row.foot .btn svg{width:13px;height:13px}
 .emptyc b{font-size:14px}
 .addgrp{display:flex;flex-direction:column;gap:8px}
+.fpanel{display:flex;flex-direction:column;gap:8px}
+.flist{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel)}
+.frow{display:flex;align-items:center;gap:10px;width:100%;border:0;border-top:1px solid var(--line-2);background:none;padding:7px 10px;text-align:left;cursor:pointer;color:var(--fg)}
+.frow:first-child{border-top:0}
+.frow:hover{background:var(--panel-2)}
+.frow.on{background:var(--accent-soft)}
+.frow .fcb{width:16px;height:16px;border:1.5px solid var(--faint);border-radius:3px;display:grid;place-items:center;font-size:11px;font-weight:700;flex:none;color:var(--accent-ink)}
+.frow.on .fcb{background:var(--accent);border-color:var(--accent)}
+.frow.part .fcb{border-color:var(--accent);color:var(--accent-text)}
+.frow .fq{font-family:var(--f-mono);font-size:13px;font-weight:500;color:var(--accent-text);width:30px;flex:none}
+.frow .fl{display:flex;flex-direction:column;min-width:0}
+.frow .fl b{font-weight:600;font-size:13.5px}
+.frow.l2{padding-left:26px;background:color-mix(in srgb,var(--panel-2) 45%,transparent)}
+.frow.l3{padding-left:44px;background:color-mix(in srgb,var(--panel-2) 75%,transparent)}
+.frow.l2 .fl b,.frow.l3 .fl b{font-weight:500;font-size:13px}
+.frow.l3 .fl b{font-family:var(--f-mono);font-size:12.5px;white-space:pre}
+.frow.hov{box-shadow:inset 3px 0 0 var(--accent);background:var(--panel-2)}
+.frow.on.l2,.frow.on.l3{background:var(--accent-soft)}
+.frow .fexp{width:18px;height:18px;flex:none;display:grid;place-items:center;border-radius:4px;color:var(--dim);margin-right:-4px}
+.frow .fexp:hover{background:var(--line);color:var(--fg)}
+.frow .fexp svg{width:10px;height:10px;transition:transform .15s}
+.frow .fexp.open svg{transform:rotate(90deg)}
+.frow .fexp.none{visibility:hidden}
+.frow .fl small{font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fed{border-color:var(--accent)}
+.fsel{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fsel b{margin-right:auto;font-size:13.5px}
+.presets{display:flex;flex-wrap:wrap;gap:5px}
+.seqed{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:8px 10px;align-items:center}
+.seqed .chk{font-weight:500}
+.fld.sm .in{height:28px}
+.seqed .tapf{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.note.thint{background:var(--panel-2);border-radius:4px;padding:6px 8px}
+.gtag{text-transform:none;letter-spacing:0;color:var(--accent-text)}
+.steps{display:flex;flex-direction:column;gap:6px}
+.step{border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+.step.open{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.step.off{opacity:.55}
+.step .sh{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;padding:9px 10px;text-align:left;cursor:pointer;color:var(--fg)}
+.step .sb2{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);font-family:var(--f-mono);font-size:11.5px;flex:none;color:var(--dim)}
+.step.open .sb2{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.step.done .sb2{background:color-mix(in srgb,var(--ok) 16%,transparent);border-color:transparent;color:var(--ok);font-weight:700}
+.step .st2{display:flex;flex-direction:column;min-width:0;flex:1}
+.step .st2 b{font-size:14px;font-weight:600}
+.step .st2 small{font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.step .chev{color:var(--dim);display:grid} .step .chev svg{width:15px;height:15px;transition:transform .15s} .step.open .chev svg{transform:rotate(180deg)}
+.step .sbody{padding:2px 12px 12px;display:flex;flex-direction:column;gap:10px}
+.zgrid-wrap{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.lbl2{display:block;font-size:12px;color:var(--dim);margin-bottom:4px}
+.zgrid{display:grid;grid-template-columns:repeat(3,30px);grid-template-rows:repeat(3,24px);gap:0;border:1.5px solid var(--faint);background:var(--stock-top);border-radius:3px;width:max-content}
+.zgrid .zp{border:0;background:none;cursor:pointer;display:grid;place-items:center;position:relative}
+.zgrid .zp::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--faint);opacity:.55}
+.zgrid .zp:hover::after{opacity:1}
+.zgrid .zp.on::after{width:12px;height:12px;background:var(--rapid);opacity:1;box-shadow:0 0 0 2px var(--panel)}
+.zcap{display:block;font-size:11px;color:var(--faint);margin-top:3px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg)}
+.seg button{border:0;background:none;padding:5px 12px;cursor:pointer;font-size:14px;color:var(--dim);font-weight:600;border-left:1px solid var(--line)}
+.seg button:first-child{border-left:0}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.seg.wide{display:flex} .seg.wide button{flex:1;font-size:13px}
+.btn.on{background:var(--accent-soft);border-color:var(--accent)}
+details.mini summary{cursor:pointer;font-size:13px;color:var(--dim)}
+details.mini[open] summary{margin-bottom:6px}
+.pinfo{font-size:13px;color:var(--dim)} .pinfo b{color:var(--fg)}
+.warn-t{color:var(--warn)}
 .checks{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .checks li{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;font-size:13px;line-height:1.4;border-top:1px solid var(--line-2)}
 .checks li:first-child{border-top:0}
@@ -238,12 +303,13 @@ pre.code .g0{color:var(--rapid)} pre.code .g1,pre.code .g2{color:var(--feed)} pr
 .spin{width:16px;height:16px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--accent);animation:sp .8s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 .drop{position:absolute;inset:10px;border:2px dashed var(--accent);border-radius:10px;background:color-mix(in srgb,var(--accent) 12%,transparent);display:grid;place-items:center;font-size:18px;font-weight:600;pointer-events:none}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:9px 14px;border-radius:6px;font-size:13.5px;z-index:20;max-width:calc(100% - 32px);display:flex;align-items:center;gap:14px}
+.toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:9px 14px;border-radius:6px;font-size:13.5px;z-index:20;max-width:calc(100% - 32px);display:flex;align-items:center;gap:14px}
 .toast .tbtn{border:0;background:none;color:var(--accent);font-weight:600;cursor:pointer;padding:2px 4px;border-radius:4px;white-space:nowrap}
 .toast .tbtn:hover{text-decoration:underline}
 .legend{display:flex;gap:12px;font-size:12px;color:var(--dim)}
 .legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
 @media (prefers-reduced-motion:reduce){.spin{animation-duration:2.4s}}
+@media (min-width:861px){ .toast{left:calc(50% + 188px);max-width:calc(100% - 420px)} }
 @media (max-width:860px){
   body{overflow:auto}
   #app{height:auto;min-height:100%}
@@ -310,6 +376,7 @@ pre.code .g0{color:var(--rapid)} pre.code .g1,pre.code .g2{color:var(--feed)} pr
         <button data-show="paths" aria-pressed="true" title="Mostra percorsi">Percorsi</button>
         <button data-show="rapids" aria-pressed="true" title="Mostra movimenti rapidi">Rapidi</button>
         <span class="sep"></span>
+        <button id="btnHQ" aria-pressed="false" title="Rendering di alta qualità: riflessi, ombre e spigoli (più pesante per la scheda grafica)">HQ</button>
         <button id="btnFit" title="Adatta la vista al pezzo (F)" aria-label="Adatta la vista"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg></button>
         <button id="btnHelp" title="Comandi di mouse e tastiera (?)" aria-label="Comandi">?</button>
       </div>
@@ -434,18 +501,19 @@ const TMAT=[['hss','HSS (acciaio rapido)'],['carbide','Metallo duro integrale'],
   ['ins_carbide','Inserti in metallo duro rivestito'],['ins_cermet','Inserti in cermet'],['ins_pcd','Inserti PCD (diamante)']];
 const EDGE=[['up','Elica destra (up-cut)'],['down','Elica sinistra (down-cut)'],['comp','A compressione'],['single','Monotagliente (O-flute)'],['straight','Taglienti dritti']];
 const TTYPES=[['flat','Fresa cilindrica (testa piana)'],['ball','Fresa sferica'],['bull','Fresa torica (raggio sull\'angolo)'],['vbit','Fresa conica / incisore a V'],
-  ['drill','Punta a forare'],['face','Spianatore ad inserti'],['shoulder','Fresa ad inserti a spallamento 90°'],['round','Fresa ad inserti tondi']];
+  ['drill','Punta a forare'],['spot','Punta da centri'],['tap','Maschio'],['face','Spianatore ad inserti'],['shoulder','Fresa ad inserti a spallamento 90°'],['round','Fresa ad inserti tondi']];
 const INSERT_T=new Set(['face','shoulder','round']);
 const isInsert=t=>INSERT_T.has(t.type)||String(t.tmat).startsWith('ins_');
 // valori di partenza quando si cambia tipo di utensile
 const TDEF={
-  flat:{cr:0}, ball:{}, bull:{cr:1}, vbit:{angle:90,tip:0.2}, drill:{angle:118,z:2},
+  flat:{cr:0}, ball:{}, bull:{cr:1}, vbit:{angle:90,tip:0.2}, drill:{angle:118,z:2}, spot:{angle:90,z:2}, tap:{z:1,tmat:'hss',pitch:1.5,plungePct:100},
   face:{cr:0.8,z:5,tmat:'ins_carbide',le:6}, shoulder:{cr:0.8,z:3,tmat:'ins_carbide',le:10}, round:{cr:5,z:4,tmat:'ins_carbide',le:5}
 };
 const matOf=()=>MATS[S.set.mat]||MATS.mdf;
 const r1=v=>Math.max(0.1,Math.round(v*10)/10);
 function suggestTool(t){
   const M=matOf(), tm=t.tmat||'carbide', c=M.vc.carbide;
+  if(t.type==='tap') return {vc:Math.max(2,Math.round(tm==='hss'?M.vc.hss*0.35:c*0.3)), fz:+t.fz||0.1};
   const vc= tm==='hss' ? M.vc.hss
     : tm==='coated' ? c*(M.metal?1.2:1)
     : tm==='ins_carbide' ? c*(M.metal?1.4:1.1)
@@ -489,7 +557,8 @@ function deriveTools(){
     t.z=Math.max(1,Math.round(+t.z||1)); t.fz=Math.max(0.001,+t.fz||0.01); t.vc=Math.max(1,+t.vc||100); t.plungePct=clamp(+t.plungePct||30,5,100);
     const n0=t.vc*1000/(Math.PI*Math.max(0.01,t.d));
     t.rpm=Math.round(clamp(n0,min,max)); t.limited=n0>max+0.5; t.lowLimited=n0<min-0.5;
-    t.feed=Math.max(1,Math.round(t.rpm*t.z*t.fz));
+    t.feed=Math.max(1,Math.round(t.type==='tap'?t.rpm*(+t.pitch||1):t.rpm*t.z*t.fz));
+    if(t.type==='tap') t.plungePct=100;
     t.plunge=Math.max(1,Math.round(t.feed*t.plungePct/100));
   }
   for(const op of S.ops){
@@ -581,6 +650,17 @@ function placeModel(){
   const ox=b.mn[0], oy=b.mn[1], oz=b.mx[2];
   for(let i=0;i<t.length;i+=3){ t[i]-=ox-m; t[i+1]-=oy-m; t[i+2]-=oz; }
   model.bb=bboxTris(t); model.ver=++modelVer; hmCache={};
+  seatModel();
+}
+const modelH=()=>model?model.bb.mx[2]-model.bb.mn[2]:0;
+// spessore del grezzo: altezza del pezzo + sovrametallo in Z (grezzo automatico o laser), oppure quello scritto a mano
+function seatModel(){
+  if(!model) return;
+  const st=S.stock, H=modelH();
+  if(st.auto||st.kind==='profile') st.t=+(H+Math.max(0,+st.zAllow||0)).toFixed(3);
+  const dz=-st.t-model.bb.mn[2];
+  if(Math.abs(dz)>1e-6){ model.tris=model.tris.slice(); const t=model.tris; for(let i=2;i<t.length;i+=3) t[i]+=dz; model.bb=bboxTris(t); model.ver=++modelVer; hmCache={}; }
+  st.partTop=+model.bb.mx[2].toFixed(4);
 }
 function setModel(tris,name,kind,fid){
   if(!tris||tris.length<9) throw new Error('Il file non contiene triangoli leggibili.');
@@ -591,6 +671,7 @@ function setModel(tris,name,kind,fid){
 function rotateModel(axis){
   if(!model) return;
   model.tris=model.tris.slice();
+  if((S.feats||[]).length){ S.feats=[]; featSel.clear(); toast('Pezzo ruotato: fori e scavi andranno riconosciuti di nuovo.'); }
   const t=model.tris;
   for(let i=0;i<t.length;i+=3){
     const x=t[i],y=t[i+1],z=t[i+2];
@@ -613,8 +694,7 @@ function fitStock(){
   if(bb){ x1=Math.max(x1,bb.x1); y1=Math.max(y1,bb.y1); }
   if(!isFinite(x1)) return;
   st.w=+(x1+m).toFixed(2); st.h=+(y1+m).toFixed(2);
-  if(model) st.t=+Math.max(t,0.1).toFixed(2);
-  hmCache={};
+  hmCache={}; seatModel();
 }
 /* Grezzo da laser: la sagoma assegnata (più il sovrametallo) definisce il grezzo; lo zero va
    all'angolo anteriore sinistro dell'ingombro della sagoma. */
@@ -637,7 +717,7 @@ function applyBlank(){
   const st=S.stock; if(st.kind!=='profile') return;
   st.shape=(st.shape||[]).filter(id=>S.sketch.some(e=>e.id===id));
   if(st.src==='model'&&model){
-    st.t=+(model.bb.mx[2]-model.bb.mn[2]).toFixed(3);
+    seatModel();
     if(!st.edgeFaces) st.edgeFaces=[...new Set(CAM.modelSection(model).filter(L=>L.outer).flatMap(L=>L.f))];
   }
   const reg=CAM.blankRegion(S,model); if(!reg.length) return;
@@ -648,7 +728,7 @@ function applyBlank(){
     S.sketch.forEach(e=>CAM.moveEnt(e,dx,dy));
     if(model){ model.tris=model.tris.slice(); const t=model.tris; for(let i=0;i<t.length;i+=3){ t[i]+=dx; t[i+1]+=dy; } model.bb=bboxTris(t); model.ver=++modelVer; }
   }
-  st.auto=false; st.w=+(x1-x0).toFixed(3); st.h=+(y1-y0).toFixed(3); hmCache={};
+  st.auto=false; st.w=+(x1-x0).toFixed(3); st.h=+(y1-y0).toFixed(3); hmCache={}; seatModel();
 }
 function getHM(res){
   const k=res.toFixed(4)+'|'+modelVer+'|'+S.stock.w+'|'+S.stock.h+'|'+S.stock.t;
@@ -700,10 +780,10 @@ async function openFile(file){
       const r= ext.startsWith('st') ? occt.ReadStepFile(buf,prm) : ext.startsWith('ig') ? occt.ReadIgesFile(buf,prm) : occt.ReadBrepFile(buf,prm);
       if(!r||!r.success) throw new Error('Il file '+ext.toUpperCase()+' non è leggibile o non contiene solidi.');
       { const tf=occtTrisFaces(r); setModel(tf.tris,name,'file',tf.fid); }
-      ensure3DOps(); pickAfter=true;
-    } else if(ext==='stl'){ setModel(CAM.parseSTL(await file.arrayBuffer()),name,'file'); ensure3DOps(); pickAfter=true; }
-    else if(ext==='obj'){ setModel(CAM.parseOBJ(await file.text()),name,'file'); ensure3DOps(); pickAfter=true; }
-    else if(ext==='ply'){ setModel(CAM.parsePLY(await file.arrayBuffer()),name,'file'); ensure3DOps(); pickAfter=true; }
+      pickAfter=true;
+    } else if(ext==='stl'){ setModel(CAM.parseSTL(await file.arrayBuffer()),name,'file'); pickAfter=true; }
+    else if(ext==='obj'){ setModel(CAM.parseOBJ(await file.text()),name,'file'); pickAfter=true; }
+    else if(ext==='ply'){ setModel(CAM.parsePLY(await file.arrayBuffer()),name,'file'); pickAfter=true; }
     else if(ext==='json'){ loadProject(await file.text(),name); histReset(); busy(false); rebuildAll(); fitView(); setTab(S.ops.length?'ops':'stock'); clearTimeout(genT); generate(); toast('Progetto '+name+' aperto.'); return; }
     else if(ext==='dxf'){ addSketch(CAM.parseDXF(await file.text()),name); }
     else if(ext==='svg'){ addSketch(parseSVG(await file.text()),name); }
@@ -711,7 +791,7 @@ async function openFile(file){
     busy(false);
     toast(ext==='dxf'||ext==='svg' ? name+' aperto. Se il pezzo arriva dal laser, in Grezzo scegli “Sagoma da taglio laser”.' : name+' aperto.');
     changed('model',true); fitView();
-    if(pickAfter){ pickAfter=false; setTab('stock'); startPick(); }
+    if(pickAfter){ pickAfter=false; S.setup={open:2,done:{model:true}}; S.feats=[]; featSel.clear(); setTab('stock'); startPick(); }
   }catch(e){ busy(false); toast(e.message||String(e)); }
 }
 function ensure3DOps(){
@@ -780,7 +860,51 @@ const C3={target:new THREE.Vector3(60,40,-9), r:260, th:-Math.PI/2.6, ph:0.62, o
 scene.add(new THREE.HemisphereLight(0xffffff,0x445566,0.75));
 const sun=new THREE.DirectionalLight(0xffffff,0.75); sun.position.set(-1,-2,3); scene.add(sun);
 const sun2=new THREE.DirectionalLight(0xffffff,0.25); sun2.position.set(2,1,1.5); scene.add(sun2);
-const G={pick:new THREE.Group(),regions:new THREE.Group(),mat:new THREE.Group(),stock:new THREE.Group(),model:new THREE.Group(),sketch:new THREE.Group(),paths:new THREE.Group(),tool:new THREE.Group(),grid:new THREE.Group(),tmp:new THREE.Group()};
+const hemi=scene.children.find(c=>c.isHemisphereLight);
+/* ---------- rendering di alta qualità (preferenza del singolo utente) ---------- */
+let HQ=false; try{ HQ=localStorage.getItem('truciolo.hq')==='1'; }catch(e){}
+let shadowDirty=true, lowRes=false, lowT=0;
+const basePR=()=>Math.min(2,window.devicePixelRatio||1), hqPR=()=>Math.min(2,Math.max(1.5,(window.devicePixelRatio||1)*1.5));
+let envTex=null;
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.ShadowMaterial({opacity:.32}));
+ground.receiveShadow=true; ground.visible=false; scene.add(ground); scene.add(sun.target);
+sun.shadow.mapSize.set(2048,2048); sun.shadow.bias=-0.0004; sun.shadow.normalBias=0.4; sun.shadow.radius=3;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+// ambiente da studio fotografico generato al volo: cielo chiaro, pavimento scuro, tre pannelli luminosi
+function makeEnv(){
+  if(envTex) return envTex;
+  const sc=new THREE.Scene(), sg=new THREE.SphereGeometry(50,48,24), pos=sg.attributes.position, cl=[];
+  for(let i=0;i<pos.count;i++){ const z=pos.getY(i)/50, k=z>0?0.55+0.45*z:0.18+0.37*(1+z); cl.push(k,k*1.01,k*1.04); }
+  sg.setAttribute('color',new THREE.Float32BufferAttribute(cl,3)); sg.rotateX(Math.PI/2);
+  sc.add(new THREE.Mesh(sg,new THREE.MeshBasicMaterial({vertexColors:true,side:THREE.BackSide})));
+  const panel=(x,y,z,w,h,k)=>{ const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(k,k,k),side:THREE.DoubleSide})); m.position.set(x,y,z); m.lookAt(0,0,0); sc.add(m); };
+  panel(-20,-25,30,30,14,5); panel(30,10,22,16,26,3); panel(0,35,12,40,8,2);
+  const pm=new THREE.PMREMGenerator(renderer); envTex=pm.fromScene(sc,0.03).texture; pm.dispose();
+  return envTex;
+}
+// sfondo sfumato dietro al pezzo (solo alta qualità)
+function bgGradient(){
+  const c=document.createElement('canvas'); c.width=4; c.height=256; const x=c.getContext('2d'), v=col('--view');
+  const top=v.clone().lerp(new THREE.Color(1,1,1),.35), bot=v.clone().multiplyScalar(.82), g=x.createLinearGradient(0,0,0,256);
+  g.addColorStop(0,'#'+top.getHexString()); g.addColorStop(1,'#'+bot.getHexString()); x.fillStyle=g; x.fillRect(0,0,4,256);
+  return new THREE.CanvasTexture(c);
+}
+function updShadowRig(){
+  const {w,h,t}=S.stock, L=Math.hypot(w,h,t)||100, c=new THREE.Vector3(w/2,h/2,-t/2);
+  sun.target.position.copy(c); sun.position.copy(c).add((HQ?new THREE.Vector3(-1,-1.6,1.9):new THREE.Vector3(-1,-2,3)).normalize().multiplyScalar(L*1.5));
+  const sc=sun.shadow.camera; sc.left=sc.bottom=-L*0.75; sc.right=sc.top=L*0.75; sc.near=L*0.2; sc.far=L*3; sc.updateProjectionMatrix();
+  ground.scale.set(L*4,L*4,1); ground.position.set(w/2,h/2,-t-0.05);
+}
+function applyHQ(){
+  renderer.setPixelRatio(HQ?hqPR():basePR());
+  renderer.shadowMap.enabled=HQ; renderer.shadowMap.autoUpdate=false; shadowDirty=true; sun.castShadow=HQ; ground.visible=HQ;
+  scene.environment=HQ?makeEnv():null;
+  hemi.intensity=HQ?0.35:0.75; sun.intensity=HQ?0.9:0.75; sun2.intensity=HQ?0.15:0.25;
+  if(HQ) updShadowRig(); else sun.position.set(-1,-2,3);
+  if(scene.background&&scene.background.isTexture){ scene.background.dispose(); } scene.background=HQ?bgGradient():null;
+  const b=document.getElementById('btnHQ'); if(b) b.setAttribute('aria-pressed',HQ);
+}
+const G={feat:new THREE.Group(),pick:new THREE.Group(),regions:new THREE.Group(),mat:new THREE.Group(),stock:new THREE.Group(),model:new THREE.Group(),sketch:new THREE.Group(),paths:new THREE.Group(),tool:new THREE.Group(),grid:new THREE.Group(),tmp:new THREE.Group(),hl:new THREE.Group()};
 Object.values(G).forEach(g=>scene.add(g));
 const col=n=>new THREE.Color(getComputedStyle(document.documentElement).getPropertyValue(n).trim()||'#888');
 const mats={};
@@ -793,18 +917,21 @@ function makeMats(){
   mats.grid=new THREE.LineBasicMaterial({color:col('--view-grid')});
   mats.stock=new THREE.LineBasicMaterial({color:col('--faint')});
   mats.stockF=new THREE.MeshBasicMaterial({color:col('--model'),transparent:true,opacity:.07,depthWrite:false,side:THREE.DoubleSide});
-  mats.model=new THREE.MeshStandardMaterial({color:col('--model'),roughness:.65,metalness:.15,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1,polygonOffsetUnits:1});
+  mats.edge=new THREE.LineBasicMaterial({color:col('--model').multiplyScalar(.35),transparent:true,opacity:.7});
+  mats.model=new THREE.MeshStandardMaterial({color:col('--model'),roughness:HQ?.32:.65,metalness:HQ?.55:.15,envMapIntensity:1,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1,polygonOffsetUnits:1});
   mats.tool=new THREE.MeshStandardMaterial({color:col('--accent'),roughness:.4,metalness:.3,transparent:true,opacity:.85});
   mats.snap=new THREE.MeshBasicMaterial({color:col('--accent')});
   mats.pickSel=new THREE.MeshBasicMaterial({color:col('--feed'),transparent:true,opacity:.55,side:THREE.DoubleSide,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1});
   mats.pick=new THREE.MeshBasicMaterial({color:col('--accent'),transparent:true,opacity:.7,side:THREE.DoubleSide,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
-  mats.matTop=new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:0,polygonOffset:true,polygonOffsetFactor:1.5,polygonOffsetUnits:2});
-  mats.matSide=new THREE.MeshStandardMaterial({color:col('--stock-side'),roughness:.85,metalness:0,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1.5,polygonOffsetUnits:2});
+  mats.matTop=new THREE.MeshStandardMaterial({vertexColors:true,roughness:HQ?.45:.85,metalness:HQ?.35:0,envMapIntensity:.8,polygonOffset:true,polygonOffsetFactor:1.5,polygonOffsetUnits:2});
+  mats.matSide=new THREE.MeshStandardMaterial({color:col('--stock-side'),roughness:HQ?.55:.85,metalness:HQ?.3:0,envMapIntensity:.8,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1.5,polygonOffsetUnits:2});
+  mats.hlF=new THREE.MeshBasicMaterial({color:col('--accent'),transparent:true,opacity:.4,depthTest:false,depthWrite:false,side:THREE.DoubleSide});
+  mats.hlL=new THREE.LineBasicMaterial({color:col('--accent'),transparent:true,depthTest:false});
   mats.cTop=col('--stock-top'); mats.cCut=col('--stock-cut'); mats.cThru=col('--view');
   renderer.setClearColor(col('--view'));
 }
 makeMats();
-function applyTheme(){ makeMats(); rebuildAll(); }
+function applyTheme(){ makeMats(); if(HQ){ if(scene.background&&scene.background.isTexture) scene.background.dispose(); scene.background=bgGradient(); } rebuildAll(); }
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyTheme);
 new MutationObserver(applyTheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
@@ -830,9 +957,11 @@ function buildStock(){
     G.stock.add(new THREE.LineSegments(new THREE.EdgesGeometry(box),mats.stock));
     if(!model&&!shows.stock) G.stock.add(new THREE.Mesh(box,mats.stockF));
   }
-  // assi origine
-  const ax=(dx,dy,dz,c)=>{ const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),new THREE.Vector3(dx,dy,dz)]); G.stock.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:col(c)}))); };
-  const L=Math.max(8,Math.min(w,h)*0.12); ax(L,0,0,'--rapid'); ax(0,L,0,'--feed'); ax(0,0,L,'--accent');
+  // assi dello zero pezzo, con l'orientamento scelto
+  const O=CAM.originOf(S), ca=Math.cos(O.rot*Math.PI/180), sa=Math.sin(O.rot*Math.PI/180);
+  const ax=(dx,dy,dz,c)=>{ const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(O.ox,O.oy,O.oz),new THREE.Vector3(O.ox+dx,O.oy+dy,O.oz+dz)]); const l=new THREE.Line(g,new THREE.LineBasicMaterial({color:col(c),depthTest:false,transparent:true})); l.renderOrder=20; G.stock.add(l); };
+  const L=Math.max(8,Math.min(w,h)*0.14); ax(L*ca,L*sa,0,'--rapid'); ax(-L*sa,L*ca,0,'--feed'); ax(0,0,L,'--accent');
+  { const m=new THREE.Mesh(new THREE.SphereGeometry(Math.max(0.8,L*0.07),16,10),new THREE.MeshBasicMaterial({color:col('--accent'),depthTest:false,transparent:true})); m.renderOrder=21; m.position.set(O.ox,O.oy,O.oz); G.stock.add(m); }
   // griglia sul piano Z0
   const pts=[], step=10, ex=20, x0=-ex, y0=-ex, x1=w+ex, y1=h+ex;
   for(let x=Math.ceil(x0/step)*step;x<=x1;x+=step) pts.push(new THREE.Vector3(x,y0,-t-0.01),new THREE.Vector3(x,y1,-t-0.01));
@@ -843,7 +972,9 @@ function buildStock(){
 function buildModel(){
   clear(G.model); if(!model) return;
   const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(model.tris,3)); g.computeVertexNormals();
-  const mesh=new THREE.Mesh(g,mats.model); G.model.add(mesh); modelMesh=mesh;
+  const mesh=new THREE.Mesh(g,mats.model); G.model.add(mesh); modelMesh=mesh; shadowDirty=true;
+  // spigoli vivi del modello, solo in alta qualità
+  if(HQ) G.model.add(new THREE.LineSegments(new THREE.EdgesGeometry(g,25),mats.edge));
 }
 let modelMesh=null;
 function buildSketch(){
@@ -929,10 +1060,10 @@ function buildTool(t){
   const sh=new THREE.CylinderGeometry(rs,rs,40,20); sh.rotateX(Math.PI/2); sh.translate(0,0,L+20);
   G.tool.add(new THREE.Mesh(sh,new THREE.MeshStandardMaterial({color:col('--faint'),roughness:.5,metalness:.6})));
 }
-function rebuildAll(){ buildStock(); buildModel(); buildSketch(); matPrepare(); buildPaths(); applyShows(); req(); }
+function rebuildAll(){ shadowDirty=true; buildStock(); buildModel(); buildSketch(); matPrepare(); buildPaths(); buildFeat(); applyShows(); req(); }
 
 const shows={stock:true,model:false,paths:true,rapids:true};
-function applyShows(){ G.paths.children.forEach(c=>{ if(c.material) c.material.opacity=shows.stock?.4:.95; }); G.mat.visible=shows.stock; G.model.visible=shows.model; G.paths.visible=shows.paths; G.tool.visible=shows.paths&&simPos.length>1; $$('[data-show]').forEach(b=>b.setAttribute('aria-pressed',shows[b.dataset.show])); }
+function applyShows(){ shadowDirty=true; G.paths.children.forEach(c=>{ if(c.material) c.material.opacity=shows.stock?.4:.95; }); G.mat.visible=shows.stock; G.model.visible=shows.model; G.paths.visible=shows.paths; G.tool.visible=shows.paths&&simPos.length>1; $$('[data-show]').forEach(b=>b.setAttribute('aria-pressed',shows[b.dataset.show])); }
 
 /* ---------- camera ---------- */
 function resize(){
@@ -949,7 +1080,7 @@ function updCam(){
     ortho.left=-hh*a; ortho.right=hh*a; ortho.top=hh; ortho.bottom=-hh; ortho.updateProjectionMatrix();
     ortho.position.set(t.x,t.y,t.z+1000); ortho.up.set(0,1,0); ortho.lookAt(t.x,t.y,t.z);
   }
-  req();
+  viewMoving(); req();
 }
 function setView(v,keepTarget){
   view=v;
@@ -964,7 +1095,17 @@ function fitView(){
   const a=viewEl.clientWidth/Math.max(1,viewEl.clientHeight);
   C3.oh=Math.max(h,w/a)*1.25+20; C3.r=Math.max(w,h,t)*1.9+40; updCam();
 }
-let needR=false; function req(){ if(!needR){ needR=true; requestAnimationFrame(()=>{ needR=false; renderer.render(scene,cam); }); } }
+let needR=false; function req(){ if(!needR){ needR=true; requestAnimationFrame(()=>{ needR=false;
+  // l'ombra dipende solo da luce e pezzo, non dalla vista: si ricalcola solo quando cambia qualcosa
+  if(HQ&&shadowDirty){ shadowDirty=false; updShadowRig(); for(const g of [G.model,G.mat]) g.traverse(o=>{ if(o.isMesh){ o.castShadow=true; o.receiveShadow=true; } }); renderer.shadowMap.needsUpdate=true; }
+  renderer.render(scene,cam); MR.pend=null; }); } }
+// in alta qualità, mentre la vista si muove si disegna a risoluzione normale e si torna nitidi appena ci si ferma
+function viewMoving(){
+  if(!HQ) return;
+  if(!lowRes){ lowRes=true; renderer.setPixelRatio(basePR()); }
+  clearTimeout(lowT); lowT=setTimeout(()=>{ lowRes=false; if(HQ){ renderer.setPixelRatio(hqPR()); req(); } },200);
+}
+function setHQ(v){ HQ=!!v; try{ localStorage.setItem('truciolo.hq',HQ?'1':'0'); }catch(e){} applyHQ(); resize(); applyTheme(); toast(HQ?'Rendering di alta qualità attivo: riflessi, ombre e spigoli.':'Rendering veloce.'); }
 new ResizeObserver(resize).observe(viewEl);
 
 /* ---------- puntatore: orbita, pan, disegno ---------- */
@@ -995,7 +1136,7 @@ cv.addEventListener('pointermove',e=>{
     const [a,b]=[...ptrs.values()], d=Math.hypot(a.x-b.x,a.y-b.y), cx=(a.x+b.x)/2, cy=(a.y+b.y)/2;
     zoomBy(pinch.d/Math.max(1,d)); pan(cx-pinch.cx,cy-pinch.cy); pinch={d,cx,cy}; return;
   }
-  if(pick){ pick.mode==='edges'?edgeHover(e):pickHover(e); } else if(view==='top') hover(e);
+  if(pick){ pick.mode==='edges'?edgeHover(e):pickHover(e); } else { if(view==='top') hover(e); if(!drag&&tab==='ops'&&model&&(S.feats||[]).length) featHover(e); }
   if(!drag) return;
   const dx=e.clientX-drag.x, dy=e.clientY-drag.y; drag.x=e.clientX; drag.y=e.clientY;
   if(!drag.moved && Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)<5) return;
@@ -1015,9 +1156,11 @@ cv.addEventListener('pointerup',e=>{
   ptrs.delete(e.pointerId); if(ptrs.size<2) pinch=null;
   if(pick&&drag&&!drag.moved&&drag.b===0){ pick.mode==='edges'?edgeClick(e):pickClick(e); drag=null; return; }
   if(drag&&drag.move&&drag.moved){ const m=drag.move; drag=null; if(S.stock.auto&&!model) fitStock(); changed('sketch'); toast(`Spostat${m.ids.length===1?'a 1 forma':'e '+m.ids.length+' forme'} di X ${fmtNum(+(m.dx||0).toFixed(3))} · Y ${fmtNum(+(m.dy||0).toFixed(3))} mm.`,{undo:true}); return; }
+  if(drag&&!drag.moved&&drag.b===0&&tab==='ops'&&model&&(S.feats||[]).length){ featClick(e); drag=null; return; }
   if(drag&&!drag.moved&&drag.b===0&&view==='top') click(e);
   drag=null;
 });
+cv.addEventListener('pointerleave',()=>{ if(hlKey&&hlKey.startsWith('3d|')) setHL(null,null); });
 cv.addEventListener('pointercancel',e=>{ ptrs.delete(e.pointerId); pinch=null; drag=null; });
 cv.addEventListener('dblclick',()=>{ if(drawTool==='poly') finishPoly(false); });
 cv.addEventListener('wheel',e=>{ e.preventDefault();
@@ -1043,7 +1186,7 @@ function setTool(t){ drawTool=t; tmp=[]; $$('[data-tool]').forEach(b=>b.setAttri
 function updDrawUI(){
   $('#drawbar').hidden=!(tab==='draw');
   const h=$('#hint'); let msg='';
-  if(pick) msg=pick.mode==='edges'?'Clic sulle superfici del bordo con sovrametallo · Esc per finire':'Clic sulla faccia che appoggerà sul pianale · Esc per annullare';
+  if(pick) msg=pick.mode==='edges'?(pick.chain?'Clic su una superficie: si seleziona tutta la catena tangente · Esc per finire':'Clic sulle superfici del bordo · Maiusc+clic per una catena di superfici tangenti · Esc per finire'):'Clic sulla faccia che appoggerà sul pianale · Esc per annullare';
   else if(tab==='draw' && view!=='top') msg='Passa alla vista Alto per disegnare';
   else if(drawActive()){
     msg={select:sel.size?'Trascina la forma per spostarla · frecce 1 mm · Ctrl+D duplica · Canc elimina':'Clic su una forma per selezionarla · Maiusc+clic per aggiungerne altre',
@@ -1227,8 +1370,9 @@ function pickClick(ev){
   // la faccia scelta è il punto più basso del pezzo?
   const faceZ=model.bb.mn[2]; let below=false;
   { const z0=t[f.list[0]*9+2]; below = z0 > faceZ + 0.02; }
-  cv.style.cursor=''; endPick(); changed('model'); setView('iso'); fitView();
-  toast(below?'Faccia impostata, ma alcune parti del modello sporgono sotto: il pezzo non appoggia su quella faccia.':'Faccia d\'appoggio impostata. Se il pezzo ha già fori e tasche, usa “Riconosci fori e tasche”.');
+  const hadFeats=(S.feats||[]).length; S.feats=[]; featSel.clear();
+  setupDone('base'); cv.style.cursor=''; endPick(); changed('model'); setView('iso'); fitView();
+  toast(below?'Faccia impostata, ma alcune parti del modello sporgono sotto: il pezzo non appoggia su quella faccia.':'Faccia d\'appoggio impostata. Ora scegli lo zero pezzo.'+(hadFeats?' I fori riconosciuti vanno rilevati di nuovo.':''));
 }
 
 /* ---------- bordi del pezzo laser: superfici con sovrametallo ---------- */
@@ -1253,7 +1397,7 @@ function startEdgePick(){
     const f=fid[i]; wall.set(f,(wall.get(f)||0)+Math.abs(nz/l)); cnt.set(f,(cnt.get(f)||0)+1);
   }
   const isWall=new Set(); for(const [f,v] of wall) if(v/cnt.get(f)<0.35) isWall.add(f);
-  pick={mode:'edges',isWall,prev:{...shows},hover:-1,raf:0};
+  pick={mode:'edges',isWall,prev:{...shows},hover:-1,raf:0,chain:false};
   shows.model=true; shows.stock=false; shows.paths=false; applyShows();
   if(view==='top') setView('iso',true);
   showEdgeFaces(); updDrawUI(); renderPanes(); req();
@@ -1283,8 +1427,22 @@ function edgeHover(ev){
 }
 function edgeClick(ev){
   const f=fidAt(ev); if(f<0){ toast('Clicca su una superficie laterale del pezzo.'); return; }
-  const set=new Set(S.stock.edgeFaces||[]); set.has(f)?set.delete(f):set.add(f);
+  const set=new Set(S.stock.edgeFaces||[]);
+  const faces=ev.shiftKey||(pick&&pick.chain)?chainFaces(f):[f], add=!set.has(f);
+  faces.forEach(x=>add?set.add(x):set.delete(x));
   S.stock.edgeFaces=[...set]; applyBlank(); changed('stock'); showEdgeFaces();
+  if(faces.length>1) toast(`${add?'Aggiunta':'Tolta'} una catena di ${faces.length} superfici tangenti.`);
+}
+// superfici consecutive lungo il bordo che si raccordano senza spigoli vivi (meno di 20°)
+function chainFaces(f){
+  const loops=CAM.modelSection(model), L=loops.find(x=>x.f.includes(f)); if(!L) return [f];
+  const n=L.pts.length, P=L.pts, F=L.f, out=new Set([f]);
+  const smooth=i=>{ const a=P[(i-1+n)%n], b=P[i], c=P[(i+1)%n], v1=[b[0]-a[0],b[1]-a[1]], v2=[c[0]-b[0],c[1]-b[1]];
+    const d=(v1[0]*v2[0]+v1[1]*v2[1])/(Math.hypot(...v1)*Math.hypot(...v2)||1); return d>Math.cos(20*Math.PI/180); };
+  const idx=F.indexOf(f);
+  for(let k=1;k<n;k++){ const i=(idx+k)%n; if(F[i]!==F[(i-1+n)%n]&&!smooth(i)) break; out.add(F[i]); }
+  for(let k=0;k<n;k++){ const i=(idx-k+n)%n; if(F[i]!==F[(i-1+n)%n]&&!smooth(i)) break; out.add(F[(i-1+n)%n]); }
+  return [...out];
 }
 
 /* ---------- righe "valori suggeriti" ---------- */
@@ -1310,7 +1468,8 @@ function geomFields(t,k){
   if(t.type==='bull'||t.type==='face'||t.type==='shoulder') return fld('Raggio angolo',k+'cr',t.cr||0,'mm',{min:0,step:0.1});
   if(t.type==='round') return fld('Raggio inserto',k+'cr',t.cr||0,'mm',{min:0,step:0.5});
   if(t.type==='vbit') return fld('Angolo incluso',k+'angle',t.angle||90,'°',{min:10,step:5})+fld('Ø punta',k+'tip',t.tip||0,'mm',{min:0,step:0.1});
-  if(t.type==='drill') return fld('Angolo punta',k+'angle',t.angle||118,'°',{min:60,step:1});
+  if(t.type==='drill'||t.type==='spot') return fld('Angolo punta',k+'angle',t.angle||(t.type==='spot'?90:118),'°',{min:60,step:1});
+  if(t.type==='tap') return fld('Passo',k+'pitch',t.pitch||1,'mm',{min:0.2,step:0.25});
   return '';
 }
 const fmtNum=v=>typeof v==='number'&&isFinite(v)?String(+v.toFixed(4)).replace('.',','):String(v??'');
@@ -1345,7 +1504,7 @@ document.addEventListener('keydown',e=>{
 function selFld(label,key,val,opts){
   return `<label class="fld"><span>${label}</span><span class="in"><select id="f-${key.replace(/\./g,'-')}" data-k="${key}">${opts.map(([v,l])=>`<option value="${esc(v)}"${String(v)===String(val)?' selected':''}>${esc(l)}</option>`).join('')}</select></span></label>`;
 }
-function chk(label,key,val){ return `<label class="chk"><input type="checkbox" id="f-${key.replace(/\./g,'-')}" data-k="${key}"${val?' checked':''}>${label}</label>`; }
+function chk(label,key,val){ return `<label class="chk"><input type="checkbox" id="f-${key.replace(/\./g,'-')}" data-k="${key}"${val?' checked':''}><span>${label}</span></label>`; }
 const entLabel={line:'Linea',rect:'Rettangolo',circle:'Cerchio',poly:'Polilinea'};
 function entDesc(e){
   const P=(x,y)=>`X${f2(x)} Y${f2(y)}`;
@@ -1372,47 +1531,100 @@ function renderDraw(){
     ${S.sketch.length?`<ul class="list">${S.sketch.map(e=>`<li data-ent="${e.id}" class="${sel.has(e.id)?'sel':''}"><span class="t">${entLabel[e.type]}</span><span class="d">${entDesc(e)}</span></li>`).join('')}</ul>`:'<div class="list"><div class="empty">Nessuna forma. Scegli Rettangolo, Cerchio o Polilinea nella barra sopra la vista.</div></div>'}
     ${S.sketch.length?'<div class="row"><button class="btn sm ghost danger" data-act="clear-sketch">Svuota disegno</button></div>':''}`;
 }
+/* ====================== IMPOSTAZIONE GUIDATA DEL PEZZO ====================== */
+const featSel=new Set();
+function setupState(){ if(!S.setup) S.setup={open:model?3:1,done:{}}; if(!S.setup.done) S.setup.done={}; return S.setup; }
+function setupDone(k){ const st=setupState(); st.done[k]=true; const order=['model','base','zero','stock','zface','feats']; const i=order.indexOf(k); if(i>=0&&i<5) st.open=i+2; }
+function stepCard(n,key,title,summary,body,state){
+  const st=setupState(), open=st.open===n, done=!!st.done[key];
+  return `<section class="step${open?' open':''}${done?' done':''}${state==='off'?' off':''}" data-step="${n}">
+    <button class="sh" data-act="step-open" data-n="${n}" aria-expanded="${open}"><span class="sb2">${done?'✓':n}</span><span class="st2"><b>${title}</b><small>${summary||''}</small></span><span class="chev">${IC.chev}</span></button>
+    ${open?`<div class="sbody">${body}</div>`:''}</section>`;
+}
+const XY_GRID=[['bl','bc','br'],['ml','mc','mr'],['fl','fc','fr']];
 function renderStock(){
-  const st=S.stock, mb=model?model.bb:null;
+  const st=S.stock, mb=model?model.bb:null, stp=setupState(), d=stp.done;
+  if(model) d.model=true;
+  const OT=CAM.originText(S), og=S.set.origin||{xy:'fl',z:'top',rot:0};
+  const H=modelH(), zA=model?Math.max(0,st.t-H):0, laser=st.kind==='profile';
+  // 1 modello
+  const s1=model?`<dl class="kv"><dt>File</dt><dd>${esc(S.modelName)}</dd><dt>Ingombro</dt><dd>${f2(mb.mx[0]-mb.mn[0])} × ${f2(mb.mx[1]-mb.mn[1])} × ${f2(H)} mm</dd></dl>
+      <details class="mini"><summary>Scala e unità</summary><div class="row"><label class="fld" style="width:110px"><span>Scala</span><span class="in"><input id="scaleIn" type="text" value="1" inputmode="decimal" autocomplete="off"><span class="u">×</span></span></label>
+        <button class="btn sm" data-act="scale" style="align-self:flex-end">Applica</button><button class="btn sm" data-act="inch" style="align-self:flex-end">Pollici → mm</button></div></details>
+      <div class="row"><label class="btn sm" for="fileIn">Apri un altro file</label><button class="btn sm ghost danger" data-act="rm-model" style="margin-left:auto">Rimuovi</button></div>`
+    :`<p class="note">Apri il modello 3D del pezzo finito: <b>STEP, IGES, BREP, STL, OBJ</b> o <b>PLY</b>. Per lavorare solo forme 2D usa la scheda Disegno.</p><div class="row"><label class="btn primary" for="fileIn">Apri il modello</label></div>`;
+  // 2 faccia d'appoggio
+  const s2=`<p class="note">Clicca sul modello la faccia che poggerà sul piano della macchina: il pezzo viene ruotato perché stia sotto.</p>
+      <div class="row"><button class="btn sm ${pick&&pick.mode==='base'?'':'primary'}" data-act="pick-face">${pick&&pick.mode==='base'?'Annulla scelta':'Scegli la faccia sul modello'}</button>
+        <button class="btn sm" data-act="rot-x">Ruota X 90°</button><button class="btn sm" data-act="rot-y">Ruota Y 90°</button><button class="btn sm" data-act="rot-z">Ruota Z 90°</button></div>
+      <div class="row"><button class="btn sm" data-act="step-done" data-k="base">La posizione va bene, continua</button></div>`;
+  // 3 zero pezzo
+  const s3=`<p class="note">Dove azzeri la macchina sul grezzo. Il programma usa queste coordinate.</p>
+      <div class="zgrid-wrap"><div><span class="lbl2">Posizione in pianta</span><div class="zgrid" role="group" aria-label="Posizione dello zero">${XY_GRID.map(r=>r.map(k=>`<button class="zp${og.xy===k?' on':''}" data-act="org-xy" data-v="${k}" title="${{fl:'Angolo anteriore sinistro',fc:'Centro lato anteriore',fr:'Angolo anteriore destro',ml:'Centro lato sinistro',mc:'Centro',mr:'Centro lato destro',bl:'Angolo posteriore sinistro',bc:'Centro lato posteriore',br:'Angolo posteriore destro'}[k]}"></button>`).join('')).join('')}</div><span class="zcap">fronte macchina ↓</span></div>
+        <div style="flex:1;min-width:150px;display:flex;flex-direction:column;gap:8px">
+          ${selFld('Quota Z0','set.origin.z',og.z||'top',[['top','Faccia superiore del grezzo'],['part','Faccia superiore del pezzo'],['bottom','Piano di appoggio']])}
+          <div><span class="lbl2">Verso dell'asse X</span><div class="seg">${[[0,'→'],[90,'↑'],[180,'←'],[270,'↓']].map(([v,a])=>`<button class="${(+og.rot||0)===v?'on':''}" data-act="org-rot" data-v="${v}" title="${{0:'X verso destra',90:'X verso il fondo',180:'X verso sinistra',270:'X verso l\'operatore'}[v]}">${a}</button>`).join('')}</div></div>
+        </div></div>
+      <div class="row"><button class="btn sm primary" data-act="step-done" data-k="zero">Conferma lo zero</button></div>`;
+  // 4 grezzo
+  const prof=laser&&model&&st.src==='model'?profileInfo():null;
+  const s4=`<div class="seg wide">${[['block','Blocco'],['profile','Profilo da taglio laser']].map(([v,l])=>`<button class="${(st.kind||'block')===v?'on':''}" data-act="stock-kind" data-v="${v}">${l}</button>`).join('')}</div>
+      ${laser?`${model?'':selFld('Sagoma ricavata da','stock.src',st.src||'sketch',[['sketch','Forme del disegno 2D']])}
+        ${model&&st.src==='model'?`<p class="note">Il contorno del pezzo arriva dal laser con un sovrametallo. Indica quali superfici del bordo lo hanno: in automatico il contorno esterno, oppure sceglile sul modello (anche come catena di superfici tangenti). Il profilo può essere chiuso o aperto.</p>
+          <div class="row"><button class="btn sm ${pick&&pick.mode==='edges'?'':'primary'}" data-act="edge-pick">${pick&&pick.mode==='edges'?'Fine selezione':'Seleziona sul modello'}</button>
+            <button class="btn sm ${pick&&pick.mode==='edges'&&pick.chain?'on':''}" data-act="edge-chain" ${pick&&pick.mode==='edges'?'':'disabled'} title="Ogni clic seleziona la catena di superfici tangenti">Catena</button>
+            <button class="btn sm ghost" data-act="edge-outer">Automatico (esterno)</button><button class="btn sm ghost" data-act="edge-holes">Fori</button><button class="btn sm ghost" data-act="edge-all">Tutti</button><button class="btn sm ghost" data-act="edge-none">Nessuno</button></div>
+          <div class="pinfo">${prof?prof.txt:''}</div>`:`<div class="op" style="border:0;background:none"><div class="tg">Sagoma: <b>${(st.shape||[]).length} form${(st.shape||[]).length===1?'a':'e'}</b>
+          <button class="btn sm" data-act="stock-sel" ${sel.size?'':'disabled title="Seleziona il contorno e i fori nella scheda Disegno"'}>Usa selezione${sel.size?` (${sel.size})`:''}</button><button class="btn sm ghost" data-act="stock-show">Mostra</button></div></div>`}
+        <div class="grid2">${fld('Sovrametallo laser','stock.laserAllow',st.laserAllow??1,'mm',{min:0,step:0.1})}${model?'':fld('Spessore','stock.t',st.t,'mm',{min:0.1})}</div>
+        ${chk('<b>Contorna il profilo</b> togliendo il sovrametallo laser','stock.contour',!!st.contour)}
+        <dl class="kv"><dt>Ingombro grezzo</dt><dd>${f2(st.w)} × ${f2(st.h)} × ${f2(st.t)} mm</dd></dl>`
+      :`${chk('Dimensioni calcolate dal pezzo','stock.auto',st.auto)}
+        ${st.auto?`<div class="grid2">${fld('Sovrametallo laterale','stock.margin',st.margin,'mm',{min:0})}</div><dl class="kv"><dt>Grezzo</dt><dd>${f2(st.w)} × ${f2(st.h)} × ${f2(st.t)} mm</dd></dl>`
+          :`<div class="grid3">${fld('Lunghezza X','stock.w',st.w,'mm',{min:1})}${fld('Larghezza Y','stock.h',st.h,'mm',{min:1})}${fld('Spessore Z','stock.t',st.t,'mm',{min:0.1})}</div>${model&&st.t<H-0.01?'<p class="warn">Il grezzo è più basso del pezzo.</p>':''}`}`}
+      <div class="row"><button class="btn sm primary" data-act="step-done" data-k="stock">Conferma il grezzo</button></div>`;
+  // 5 sovrametallo in Z
+  const zf=S.zface||{};
+  const s5=model?`<p class="note">Lo spessore del grezzo è l'altezza massima del pezzo${st.auto||laser?' più il sovrametallo in Z':''}. Il pezzo poggia sul piano; sopra resta il materiale da togliere.</p>
+      ${st.auto||laser?`<div class="grid2">${fld('Sovrametallo in Z','stock.zAllow',st.zAllow||0,'mm',{min:0,step:0.1})}</div>`:`<dl class="kv"><dt>Sovrametallo in Z</dt><dd>${f2(zA)} mm</dd></dl>`}
+      ${chk('<b>Rimuovere il sovrametallo in Z</b> con una spianatura','zface.on',!!zf.on)}
+      ${zf.on?`<div class="grid2">${fld('Passata Z','zface.stepdown',zf.stepdown||Math.min(zA||0.5,1),'mm',{min:0.05,step:0.1})}</div>
+        <p class="note">${laser?'Pezzo da laser: la spianatura segue il profilo del pezzo, senza passate nel vuoto.':'La spianatura copre tutto il grezzo.'}${zA<=0.001?' <b>Il sovrametallo in Z è zero: non c\'è niente da spianare.</b>':''}</p>`:''}
+      <div class="row"><button class="btn sm primary" data-act="step-done" data-k="zface">Continua</button></div>`:'<p class="note">Serve un modello 3D.</p>';
+  // 6 fori e scavi
+  const nf=(S.feats||[]), nh=nf.filter(f=>f.kind==='hole').length, np=nf.filter(f=>f.kind!=='hole'&&f.kind!=='outer').length;
+  const s6=model?`<p class="note">L'app cerca i centri dei fori e gli scavi che entrano nello spessore del grezzo. Poi, nella scheda Lavorazioni, selezioni quelli uguali e assegni a tutti insieme la stessa lavorazione.</p>
+      ${nf.length?`<dl class="kv"><dt>Fori</dt><dd>${nh}</dd><dt>Tasche e ribassi</dt><dd>${np}</dd></dl>`:''}
+      <div class="row"><button class="btn sm ${nf.length?'':'primary'}" data-act="recognize">${nf.length?'Riconosci di nuovo':'Riconosci fori e scavi'}</button>${nf.length?'<button class="btn sm primary" data-act="goto" data-tab="ops">Imposta le lavorazioni →</button>':''}</div>`:'<p class="note">Serve un modello 3D.</p>';
+  const sum2=d.base?'Faccia scelta':'Da scegliere', sum3=`${OT.pos} · Z0 ${OT.z.replace('faccia superiore del ','sopra ')} · ${OT.dir}`;
+  const sum4=laser?`Profilo laser · +${fmtNum(st.laserAllow??1)} mm${st.contour?' · contornatura':''}`:`Blocco ${f2(st.w)}×${f2(st.h)}×${f2(st.t)}${st.auto?' (automatico)':''}`;
+  const sum5=model?(zf.on?`Spianatura ${f2(zA)} mm`:`Sovrametallo ${f2(zA)} mm, non rimosso`):'';
+  const sum6=nf.length?`${nh} fori · ${np} scavi`:(model?'Da riconoscere':'');
   $('#p-stock').innerHTML=`
-    <div class="card">
-      <h3>Modello 3D</h3>
-      ${model?`<dl class="kv"><dt>File</dt><dd>${esc(S.modelName)}</dd>
-        <dt>Ingombro</dt><dd>${f2(mb.mx[0]-mb.mn[0])} × ${f2(mb.mx[1]-mb.mn[1])} × ${f2(mb.mx[2]-mb.mn[2])} mm</dd>
-        <dt>Triangoli</dt><dd>${(model.tris.length/9).toLocaleString('it-IT')}</dd></dl>
-        <div class="row"><span class="note" style="flex:1 0 100%">Orienta il pezzo: il lato da lavorare deve guardare verso +Z.</span>
-          <button class="btn sm primary" data-act="recognize">Riconosci fori e tasche</button><button class="btn sm" data-act="pick-face">${pick?'Annulla scelta faccia':'Scegli faccia d\'appoggio'}</button><button class="btn sm" data-act="rot-x">Ruota X 90°</button><button class="btn sm" data-act="rot-y">Ruota Y 90°</button><button class="btn sm" data-act="rot-z">Ruota Z 90°</button></div>
-        <div class="row"><label class="fld" style="width:110px"><span>Scala</span><span class="in"><input id="scaleIn" type="text" value="1" inputmode="decimal" autocomplete="off"><span class="u">×</span></span></label>
-          <button class="btn sm" data-act="scale" style="align-self:flex-end">Applica</button><button class="btn sm" data-act="inch" style="align-self:flex-end">Pollici → mm</button>
-          <button class="btn sm ghost danger" data-act="rm-model" style="align-self:flex-end;margin-left:auto">Rimuovi</button></div>`
-      :`<p class="note">Nessun modello. Apri un file <b>STEP, IGES, BREP, STL, OBJ</b> o <b>PLY</b> per le lavorazioni 3D.</p>`}
+    <div class="steps">
+      ${stepCard(1,'model','Modello',model?esc(S.modelName):'Da aprire',s1)}
+      ${stepCard(2,'base','Faccia d\'appoggio',sum2,s2,model?'':'off')}
+      ${stepCard(3,'zero','Zero pezzo',sum3,s3)}
+      ${stepCard(4,'stock','Grezzo',sum4,s4)}
+      ${stepCard(5,'zface','Sovrametallo in Z',sum5,s5,model?'':'off')}
+      ${stepCard(6,'feats','Fori e scavi',sum6,s6,model?'':'off')}
     </div>
     <div class="card">
-      <h3>Grezzo</h3>
+      <h3>Materiale</h3>
       ${selFld('Materiale del pezzo','set.mat',S.set.mat,Object.entries(MATS).map(([k,v])=>[k,v.n]))}
       <p class="note">${esc(matOf().note)} Velocità e passate suggerite partono da qui.</p>
-      ${selFld('Forma del grezzo','stock.kind',st.kind||'block',[['block','Blocco rettangolare'],['profile','Sagoma da taglio laser']])}
-      ${st.kind==='profile'?`
-      ${model?selFld('Sagoma ricavata da','stock.src',st.src||'sketch',[['model','Bordi del modello 3D'],['sketch','Forme del disegno 2D']]):''}
-      ${st.src==='model'&&model?edgePanel(st):`
-      <p class="note">Il pezzo arriva già sagomato: contorno e fori interni delle forme assegnate, più il sovrametallo lasciato dal laser. Lo zero è l'angolo anteriore sinistro dell'ingombro.</p>
-      <div class="op" style="border:0;background:none"><div class="tg">Sagoma: <b>${(st.shape||[]).length} form${(st.shape||[]).length===1?'a':'e'}</b>
-        <button class="btn sm" data-act="stock-sel" ${sel.size?'':'disabled title="Seleziona il contorno e i fori nella vista Alto"'}>Usa selezione${sel.size?` (${sel.size})`:''}</button>
-        <button class="btn sm ghost" data-act="stock-show">Mostra</button></div></div>`}
-      <div class="grid2">${fld('Sovrametallo laser','stock.laserAllow',st.laserAllow??1,'mm',{min:0,step:0.1})}${st.src==='model'&&model?'':fld('Spessore','stock.t',st.t,'mm',{min:0.1})}</div>
-      <dl class="kv"><dt>Ingombro grezzo</dt><dd>${f2(st.w)} × ${f2(st.h)} mm</dd></dl>
-      ${S.ops.some(o=>o.type==='trim')?'':'<div class="row"><button class="btn sm primary" data-act="add" data-t="trim">Aggiungi contornatura del sovrametallo</button></div>'}`
-      :`${chk('Adatta automaticamente al pezzo',`stock.auto`,st.auto)}
-      <div class="grid3">${fld('Lunghezza X','stock.w',st.w,'mm',{min:1})}${fld('Larghezza Y','stock.h',st.h,'mm',{min:1})}${fld('Spessore Z','stock.t',st.t,'mm',{min:0.1})}</div>
-      ${st.auto?`<div class="grid3">${fld('Sovrametallo','stock.margin',st.margin,'mm',{min:0})}</div>`:''}`}
-      <p class="note">Zero pezzo: <b>X0 Y0</b> angolo anteriore sinistro, <b>Z0</b> faccia superiore del grezzo. Azzera la macchina negli stessi punti.</p>
     </div>
     <div class="card">
       <h3>Macchina e movimenti</h3>
       <div class="grid3">${fld('Z sicurezza','set.safeZ',S.set.safeZ,'mm',{min:0.5})}${fld('Z disimpegno','set.retract',S.set.retract,'mm',{min:0.2})}${fld('Rapido macchina','set.rapid',S.set.rapid,'mm/min',{min:100})}</div>
       <div class="grid2">${fld('Giri min mandrino','set.minRpm',S.set.minRpm,'giri/min',{min:0,step:500})}${fld('Giri max mandrino','set.maxRpm',S.set.maxRpm,'giri/min',{min:1000,step:500})}</div>
-      <p class="note">La Z di sicurezza si usa tra una lavorazione e l'altra, quella di disimpegno per gli spostamenti dentro la stessa lavorazione.</p>
+      <p class="note">Le quote Z di sicurezza e disimpegno sono misurate dalla faccia superiore del grezzo.</p>
     </div>`;
+}
+function profileInfo(){
+  const ch=CAM.edgeChains(CAM.modelSection(model),new Set(S.stock.edgeFaces||[]));
+  const cl=ch.filter(c=>c.closed).length, op=ch.length-cl, n=(S.stock.edgeFaces||[]).length;
+  return {txt:n?`<b>${n}</b> superfic${n===1?'ie':'i'} di bordo · profilo: ${cl?`${cl} chius${cl===1?'o':'i'}`:''}${cl&&op?' e ':''}${op?`${op} apert${op===1?'o':'i'}`:''}`:'<span class="warn-t">Nessuna superficie selezionata: il grezzo coincide con il pezzo.</span>'};
 }
 const OPT={
   side:[['outside','Esterno'],['inside','Interno'],['on','Sulla linea']],
@@ -1469,7 +1681,7 @@ function opStat(o){
   return {L,t,warn:sg.warn,n:sg.m.length};
 }
 const openTools=new Set();
-const INFO_RE=[/^Sovrametallo laser .* tolto/,/^La spianatura toglie/];
+const INFO_RE=[/^Sovrametallo laser .* tolto/,/^La spianatura toglie/,/^Foratura passante: la punta esce/];
 const isInfo=w=>INFO_RE.some(r=>r.test(w));
 const itn=t=>String(t).replace(/(\d)\.(\d)/g,'$1,$2');
 const nd=v=>fmtNum(+v);
@@ -1477,16 +1689,17 @@ function toolRow(t,i){
   const k=`tools.${i}.`, open=openTools.has(t.id), uses=S.ops.filter(o=>o.tool===t.id).length, bad=t.limited||t.lowLimited||t.badMat;
   const head=`<button class="trow" data-act="tool-toggle" data-id="${t.id}" aria-expanded="${open}">
       <span class="tn">T${t.num}</span><span class="tl"><b>Ø${nd(t.d)} ${CAM.TLABEL[t.type]||''}</b><small>${esc(t.name)}</small></span>
-      <span class="tv">${t.rpm.toLocaleString('it-IT')} giri<br>F ${t.feed.toLocaleString('it-IT')}</span>${bad?'<span class="wdot" title="Controlla i dati di taglio"></span>':''}<span class="chev">${IC.chev}</span></button>`;
+      <span class="tv">${t.rpm.toLocaleString('it-IT')} giri<br>${t.type==='tap'?'passo '+nd(t.pitch||1):'F '+t.feed.toLocaleString('it-IT')}</span>${bad?'<span class="wdot" title="Controlla i dati di taglio"></span>':''}<span class="chev">${IC.chev}</span></button>`;
   if(!open) return `<div class="tool">${head}</div>`;
   return `<div class="tool open">${head}<div class="tbody">
       ${fld('Nome',k+'name',t.name,'',{type:'text'})}
       ${selFld('Tipo',k+'type',t.type,TTYPES)}
       <div class="grid3">${fld('Diametro',k+'d',t.d,'mm',{min:0.05,step:0.5})}${geomFields(t,k)}${fld('N° utensile',k+'num',t.num,'',{min:1,step:1})}</div>
-      <div class="grid2">${selFld('Materiale',k+'tmat',t.tmat,TMAT)}${isInsert(t)||t.type==='drill'?fld('Lungh. tagliente',k+'le',t.le||0,'mm',{min:0}):selFld('Tagliente',k+'edge',t.edge,EDGE)}</div>
-      ${isInsert(t)||t.type==='drill'?'':`<div class="grid2">${fld('Lungh. tagliente',k+'le',t.le||0,'mm',{min:0})}</div>`}
+      <div class="grid2">${selFld('Materiale',k+'tmat',t.tmat,TMAT)}${isInsert(t)||t.type==='drill'||t.type==='spot'||t.type==='tap'?fld('Lungh. tagliente',k+'le',t.le||0,'mm',{min:0}):selFld('Tagliente',k+'edge',t.edge,EDGE)}</div>
+      ${isInsert(t)||t.type==='drill'||t.type==='spot'||t.type==='tap'?'':`<div class="grid2">${fld('Lungh. tagliente',k+'le',t.le||0,'mm',{min:0})}</div>`}
       ${t.badMat?'<p class="warn">Gli inserti PCD non sono adatti ai materiali ferrosi: scegli metallo duro rivestito o cermet.</p>':''}
-      <div class="grid2">${fld(isInsert(t)?'N° inserti (z)':'N° denti (z)',k+'z',t.z,'',{min:1,step:1})}${fld('Avanz. per dente (fz)',k+'fz',t.fz,'mm/z',{min:0.001,step:0.005})}${fld('Velocità di taglio (Vc)',k+'vc',t.vc,'m/min',{min:1,step:10})}${fld('Affondamento',k+'plungePct',t.plungePct,'% F',{min:5,step:5})}</div>
+      ${t.type==='tap'?`<div class="grid2">${fld('Velocità di taglio (Vc)',k+'vc',t.vc,'m/min',{min:1,step:1})}</div><p class="note">Avanzamento = giri × passo, sincronizzato con il mandrino nel ciclo di maschiatura.</p>`
+      :`<div class="grid2">${fld(isInsert(t)?'N° inserti (z)':'N° denti (z)',k+'z',t.z,'',{min:1,step:1})}${fld('Avanz. per dente (fz)',k+'fz',t.fz,'mm/z',{min:0.001,step:0.005})}${fld('Velocità di taglio (Vc)',k+'vc',t.vc,'m/min',{min:1,step:10})}${fld('Affondamento',k+'plungePct',t.plungePct,'% F',{min:5,step:5})}</div>`}
       <dl class="calc"><div><dt>Giri n · giri/min</dt><dd>${t.rpm.toLocaleString('it-IT')}</dd></div><div><dt>Avanz. F · mm/min</dt><dd>${t.feed.toLocaleString('it-IT')}</dd></div><div><dt>Affond. · mm/min</dt><dd>${t.plunge.toLocaleString('it-IT')}</dd></div></dl>
       ${toolSugRow(t,i)}
       ${t.lowLimited?`<p class="warn">Sotto il minimo del mandrino (${(+S.set.minRpm).toLocaleString('it-IT')} giri/min): la Vc effettiva sale a ${Math.round(t.rpm*Math.PI*t.d/1000)} m/min. Valuta una fresa più piccola o una macchina più lenta.</p>`:''}
@@ -1514,7 +1727,7 @@ function renderOps(){
       <button class="sum" data-act="op-toggle" data-id="${o.id}"><span>${CAM.OP_LABEL[o.type]} · ${tt?`T${tt.num} Ø${nd(tt.d)}`:'nessun utensile'}${opBrief(o)}</span>${st&&o.on?`<span class="t">${fmtTime(st.t)}</span>`:''}</button></div>`;
     return `<div class="op${o.on?'':' off'}${foc?' foc':''}" data-op="${o.id}">${head}
       <div class="body">
-        <div class="ty2">${CAM.OP_LABEL[o.type]}</div>
+        <div class="ty2">${CAM.OP_LABEL[o.type]}${o.gen?' · <span class="gtag">creata da '+(o.gen==='face'?'sovrametallo Z':o.gen==='trim'?'profilo laser':o.gen==='outer'?'contorno pezzo':'fori e scavi')+'</span>':''}</div>
         ${selFld('Utensile',`ops.${i}.tool`,o.tool,tl.map(t=>[t.id,`T${t.num} · Ø${nd(t.d)} ${CAM.TLABEL[t.type]||''} · ${t.name}`]))}
         ${opFields(o,i)}
         ${opSugRow(o,i)}
@@ -1535,6 +1748,7 @@ function renderOps(){
       <div class="row">${has3d?'<button class="btn sm primary" data-act="recognize">Riconosci fori e tasche</button>':''}${!has3d&&!S.sketch.length?'<label class="btn sm primary" for="fileIn">Apri file</label><button class="btn sm" data-act="goto" data-tab="draw">Vai al disegno</button>':''}</div></div>`;
   const dis3=has3d?'':' disabled title="Serve un modello 3D: apri un file STEP, IGES o STL"';
   $('#p-ops').innerHTML=`
+    ${featPanel()}
     <div><h3>Utensili <span class="cnt">${tl.length}</span><button class="btn sm ghost sp" data-act="add-tool">+ Aggiungi</button></h3></div>
     <div class="tools">${tl.map(toolRow).join('')||'<div class="empty">Nessun utensile: aggiungine uno.</div>'}</div>
     <div><h3>Sequenza di lavoro <span class="cnt">${S.ops.length}</span>${S.ops.length>1?`<button class="btn sm ghost sp" data-act="ops-${openOps.size?'close':'open'}">${openOps.size?'Chiudi tutte':'Apri tutte'}</button>`:''}</h3></div>
@@ -1547,7 +1761,7 @@ function renderOps(){
         <button class="btn sm" data-act="add" data-t="drill" title="Fora i cerchi selezionati">+ Foratura</button>
         <button class="btn sm" data-act="add" data-t="rough3d"${dis3}>+ Sgrossatura 3D</button>
         <button class="btn sm" data-act="add" data-t="finish3d"${dis3}>+ Finitura 3D</button>
-        ${isLaser?'<button class="btn sm" data-act="add" data-t="trim">+ Contornatura sovrametallo</button>':''}
+        ${isLaser&&!S.stock.contour?'<button class="btn sm" data-act="add" data-t="trim">+ Contornatura sovrametallo</button>':''}
       </div>
       ${sel.size?`<p class="note">Le nuove lavorazioni 2D useranno le ${sel.size} forme selezionate.</p>`:''}
     </div>`;
@@ -1561,7 +1775,7 @@ function checks(){
     sg.warn.filter(w=>!isInfo(w)).forEach(w=>out.push({lvl:'warn',t:w,op:sg.op,si}));
     if(!sg.m.length&&!sg.warn.length) out.push({lvl:'warn',t:'Non genera nessun movimento.',op:sg.op,si});
   });
-  S.tools.forEach(t=>{ if(t.lowLimited&&S.ops.some(o=>o.on&&o.tool===t.id)) out.push({lvl:'warn',t:`T${t.num}: giri sotto il minimo del mandrino, la velocità di taglio effettiva è più alta di quella impostata.`,tool:t}); });
+  S.tools.forEach(t=>{ if(t.lowLimited&&S.ops.some(o=>o.on&&o.tool===t.id)) out.push({lvl:'warn',t:t.type==='tap'?`T${t.num} maschio: servono ${Math.round(t.vc*1000/(Math.PI*t.d)).toLocaleString('it-IT')} giri/min ma il mandrino non scende sotto ${(+S.set.minRpm).toLocaleString('it-IT')} (Pezzo → Macchina e movimenti).`:`T${t.num}: giri sotto il minimo del mandrino, la velocità di taglio effettiva è più alta di quella impostata.`,tool:t}); });
   if(MR.crash) out.push({lvl:'bad',t:`Un movimento rapido entra nel materiale alla riga ${MR.crash.line}. Controlla Z di sicurezza e di disimpegno, o l'ordine delle lavorazioni.`,line:MR.crash.line});
   return out;
 }
@@ -1639,15 +1853,28 @@ function renderPanesRaw(){
   updBadges();
 }
 function setTab(t){
-  tab=t; $$('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));
+  tab=t; $$('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t)); setTimeout(buildFeat,0);
   ['draw','stock','ops','gcode'].forEach(k=>$('#p-'+k).hidden=k!==t);
   if(t==='draw'){ if(view!=='top') setView('top',false); if(drawTool==='select'&&!S.sketch.length) setTool('rect'); }
   renderPanes(); updDrawUI(); drawTmp();
 }
 
 /* ---------- binding degli input ---------- */
+function onStockKind(){
+  const st=S.stock;
+  if(st.kind==='profile'){
+    let off=0; S.ops.forEach(o=>{ if((o.type==='rough3d'||o.type==='finish3d')&&o.on){ o.on=false; off++; } });
+    if(off) toast('Pezzo da laser: sgrossatura e finitura 3D disattivate. Puoi riattivarle in Lavorazioni.');
+    if(model?!st.edgeFaces:!(st.shape||[]).length) pickBlankShapes(); else st.src=model?'model':'sketch';
+    if(st.contour==null) st.contour=true;
+    applyBlank();
+  } else { st.auto=true; if(model) placeModel(); fitStock(); }
+  hmCache={}; changed('stock'); fitView();
+}
 function setPath(path,raw,el){
   const ks=path.split('.'); let o=S;
+  if(ks[0]==='zface'&&!S.zface) S.zface={on:false};
+  if(ks[0]==='set'&&ks[1]==='origin'&&!S.set.origin) S.set.origin={xy:'fl',z:'top',rot:0};
   for(let i=0;i<ks.length-1;i++) o=o[ks[i]];
   let k=ks[ks.length-1], v;
   if(el.type==='checkbox') v=el.checked;
@@ -1665,7 +1892,15 @@ function setPath(path,raw,el){
   o[k]=v; return true;
 }
 document.addEventListener('change',e=>{
-  const el=e.target; if(!el.dataset||!el.dataset.k) return;
+  const el=e.target;
+  if(el.dataset&&el.dataset.fp){
+    const k=el.dataset.fp; let v;
+    if(el.type==='checkbox') v=el.checked; else if(el.classList.contains('num')){ v=el.value.trim()===''?null:parseNum(el.value); if(v!==null&&!(v>0)){ toast('Valore non valido.'); renderOps(); return; } } else v=el.value;
+    const L=(S.feats||[]).filter(f=>featSel.has(f.id));
+    L.forEach(f=>{ f.proc={...f.proc,[k]:v}; if(k==='tap'&&v&&!f.proc.thread){ const g=threadGuess(2*f.r); f.proc.thread=g?g.k:'M8'; } if(k==='main'&&v!=='drill') f.proc.pilot=false; });
+    changed('ops'); return;
+  }
+  if(!el.dataset||!el.dataset.k) return;
   if(!setPath(el.dataset.k,el.value,el)) return;
   { const m=el.dataset.k.match(/^tools\.(\d+)\.type$/); if(m){ const t=S.tools[+m[1]], D=TDEF[t.type]||{};
       for(const [kk,v] of Object.entries(D)) t[kk]=v;
@@ -1677,6 +1912,8 @@ document.addEventListener('change',e=>{
     if((m=kk.match(/^tools\.(\d+)\.(vc|fz)$/))) S.tools[+m[1]].auto=false;
     if((m=kk.match(/^ops\.(\d+)\.p\.(stepdown|stepover|peck|pitch|radial)$/))&&S.ops[+m[1]].type!=='finish3d') S.ops[+m[1]].autoP=false; }
   const root=el.dataset.k.split('.')[0];
+  if(el.dataset.k&&el.dataset.k.startsWith('set.origin.')){ changed('stock'); return; }
+  if(el.dataset.k==='zface.on'||el.dataset.k==='zface.stepdown'){ changed('stock'); return; }
   if(root==='stock'){
     if(el.dataset.k==='stock.kind'&&S.stock.kind==='profile'){
       let off=0; S.ops.forEach(o=>{ if((o.type==='rough3d'||o.type==='finish3d')&&o.on){ o.on=false; off++; } });
@@ -1686,12 +1923,18 @@ document.addEventListener('change',e=>{
     if(S.stock.kind==='profile') applyBlank();
     else { if(el.dataset.k==='stock.kind') S.stock.auto=true; if(model) placeModel(); fitStock(); }
     hmCache={}; changed('stock'); renderPanes(); fitView(); return; }
+  if(el.dataset.k==='set.post'){ changed('set'); return; }
   if(/^set\.(file|post|arcs|coolant|cycles|lineNums|progNum)$/.test(el.dataset.k)){ if(prog){ gc=CAM.writeGcode(S,prog); simIdx=-1; buildPaths(); renderGcode(); } save(); return; }
   if(root==='sketch'){ if(S.stock.auto&&!model) fitStock(); changed('sketch'); return; }
   if(root==='tools'){ buildToolCache(); }
   changed(root);
 });
 function buildToolCache(){ toolShown=null; }
+document.addEventListener('mouseover',e=>{
+  const r=e.target.closest&&e.target.closest('#p-ops .frow[data-key]');
+  if(r){ setHL(featNodes.get(r.dataset.key),'row|'+r.dataset.key); }
+  else if(hlKey&&hlKey.startsWith('row|')) setHL(null,null);
+});
 document.addEventListener('click',e=>{
   const cl=e.target.closest('#code .l[data-ln]'); if(cl&&!getSelection().toString()){ jumpLine(+cl.dataset.ln); markLine(+cl.dataset.ln,true); return; }
   const li=e.target.closest('[data-ent]');
@@ -1700,6 +1943,35 @@ document.addEventListener('click',e=>{
   const a=b.dataset.act, i=+b.dataset.i;
   switch(a){
     case 'del-sel': delSel(); break;
+    case 'fexp': { const k=b.dataset.key; fOpen.has(k)?fOpen.delete(k):fOpen.add(k); renderOps(); break; }
+    case 'fsel-node': { const ids=featNodes.get(b.dataset.key); if(!ids) break; const all=ids.every(id=>featSel.has(id));
+      if(e.shiftKey||e.ctrlKey||e.metaKey||e.target.closest('.fcb')) all?ids.forEach(id=>featSel.delete(id)):ids.forEach(id=>featSel.add(id));
+      else if(all&&featSel.size===ids.length) featSel.clear();
+      else { featSel.clear(); ids.forEach(id=>featSel.add(id)); }
+      buildFeat(); renderOps(); break; }
+    case 'fsplit': { const L=(S.feats||[]).filter(f=>featSel.has(f.id)); if(!L.length) break;
+      const n=Math.max(0,...(S.feats||[]).map(f=>f.grp||0))+1; L.forEach(f=>{ f.grp=n; fOpen.add(f.kind+'|'+featGeomText(f)); });
+      changed('ops'); toast(`${L.length} element${L.length===1?'o':'i'} nel gruppo ${n}: ora puoi dar${L.length===1?'gli':'gli'} una lavorazione diversa, con operazioni proprie.`); break; }
+    case 'fjoin': { const L=(S.feats||[]).filter(f=>featSel.has(f.id)); let n=0;
+      for(const f of L){ if(!f.grp) continue; const k=f.kind+'|'+featGeomText(f), main=(S.feats||[]).find(x=>!x.grp&&!featSel.has(x.id)&&x.kind+'|'+featGeomText(x)===k); delete f.grp; if(main) f.proc=JSON.parse(JSON.stringify(main.proc)); n++; }
+      if(n){ changed('ops'); toast(`${n} element${n===1?'o riunito':'i riuniti'} al gruppo principale.`); } break; }
+    case 'fsel-group': { const g=featGroups().find(x=>x.key===b.dataset.key); if(!g) break; const all=g.ids.every(id=>featSel.has(id));
+      // clic sulla riga: seleziona quel gruppo; casella o Maiusc/Ctrl: aggiunge o toglie dalla selezione
+      if(e.shiftKey||e.ctrlKey||e.metaKey||e.target.closest('.fcb')) all?g.ids.forEach(id=>featSel.delete(id)):g.ids.forEach(id=>featSel.add(id));
+      else if(all&&featSel.size===g.ids.length) featSel.clear();
+      else { featSel.clear(); g.ids.forEach(id=>featSel.add(id)); }
+      buildFeat(); renderOps(); break; }
+    case 'fsel-same': { const L=(S.feats||[]).filter(f=>featSel.has(f.id)); const keys=new Set(L.map(f=>f.kind+'|'+featGeomText(f)));
+      (S.feats||[]).forEach(f=>{ if(keys.has(f.kind+'|'+featGeomText(f))) featSel.add(f.id); }); buildFeat(); renderOps(); toast(`Selezionati ${featSel.size} elementi uguali.`); break; }
+    case 'fsel-none': featSel.clear(); buildFeat(); renderOps(); break;
+    case 'fpreset': applyPreset(b.dataset.v,b.dataset.th); break;
+    case 'step-open': { const st=setupState(), n=+b.dataset.n; st.open=st.open===n?0:n; renderStock(); break; }
+    case 'step-done': { setupDone(b.dataset.k); if(pick) endPick(); save(); renderStock(); updBadges(); break; }
+    case 'org-xy': S.set.origin={...(S.set.origin||{xy:'fl',z:'top',rot:0}),xy:b.dataset.v}; changed('stock'); break;
+    case 'org-rot': S.set.origin={...(S.set.origin||{xy:'fl',z:'top',rot:0}),rot:+b.dataset.v}; changed('stock'); break;
+    case 'stock-kind': { const v=b.dataset.v; if((S.stock.kind||'block')===v) break; const sel2=document.getElementById('f-stock-kind');
+      S.stock.kind=v; onStockKind(); relaserFeats(); break; }
+    case 'edge-chain': if(pick&&pick.mode==='edges'){ pick.chain=!pick.chain; updDrawUI(); renderStock(); } break;
     case 'dup-sel': dupSel(); break;
     case 'tool-toggle': { const id=b.dataset.id; openTools.has(id)?openTools.delete(id):openTools.add(id); renderOps(); break; }
     case 'dup-tool': { const t=JSON.parse(JSON.stringify(S.tools[i])); t.id=uid(); t.num=Math.max(0,...S.tools.map(x=>x.num))+1; t.name+=' (copia)'; S.tools.splice(i+1,0,t); openTools.add(t.id); changed('tools'); break; }
@@ -1729,11 +2001,12 @@ document.addEventListener('click',e=>{
     case 'rot-z': rotateModel('z'); fitView(); break;
     case 'scale': { const k=parseNum($('#scaleIn').value); if(!(k>0)){ toast('Scala non valida: scrivi un numero maggiore di zero, ad esempio 2 o 0,5.'); break; } scaleModel(k); fitView(); toast('Modello scalato ×'+fmtNum(k)+'.',{undo:true}); break; }
     case 'inch': scaleModel(25.4); fitView(); break;
-    case 'rm-model': { model=null; S.modelName=''; S.modelKind='none'; hmCache={}; opCache.clear(); changed('model'); toast('Modello rimosso.',{undo:true}); break; }
+    case 'rm-model': { S.feats=[]; featSel.clear(); model=null; S.modelName=''; S.modelKind='none'; hmCache={}; opCache.clear(); changed('model'); toast('Modello rimosso.',{undo:true}); break; }
     case 'add-tool': { const n=Math.max(0,...S.tools.map(t=>t.num))+1, t={id:uid(),num:n,name:'Nuova fresa',type:'flat',d:4,z:2,tmat:'carbide',edge:'up',auto:true,fz:0.03,vc:250,plungePct:30}; S.tools.push(t); openTools.add(t.id); changed('tools'); break; }
     case 'del-tool': { const t=S.tools[i]; if(S.ops.some(o=>o.tool===t.id)) break; S.tools.splice(i,1); changed('tools'); toast(`Utensile T${t.num} eliminato.`,{undo:true}); break; }
     case 'add': addOp(b.dataset.t); break;
-    case 'op-del': { const o=S.ops.splice(i,1)[0]; if(focusOp===o.id) focusOp=null; changed('ops'); toast(`Lavorazione “${o.name}” eliminata.`,{undo:true}); break; }
+    case 'op-del': { if(S.ops[i].gen){ S.ops[i].on=false; changed('ops'); toast('Questa lavorazione nasce dall\'impostazione del pezzo o dai fori: l\'ho esclusa. Per toglierla cambia il processo dei fori o l\'opzione nella scheda Pezzo.'); break; }
+      const o=S.ops.splice(i,1)[0]; if(focusOp===o.id) focusOp=null; changed('ops'); toast(`Lavorazione “${o.name}” eliminata.`,{undo:true}); break; }
     case 'op-toggle': { const id=b.dataset.id; if(openOps.has(id)){ openOps.delete(id); if(focusOp===id) focusOp=null; } else { openOps.add(id); focusOp=id; } buildPaths(); renderOps(); break; }
     case 'op-up': { const o=S.ops.splice(i,1)[0]; S.ops.splice(i-1,0,o); changed('ops'); break; }
     case 'tg-sel': S.ops[i].targets=[...sel]; changed('ops'); break;
@@ -1766,87 +2039,392 @@ function addOp(t){
 }
 
 /* ====================== RICONOSCIMENTO LAVORAZIONI ====================== */
+const THREADS={M3:[0.5,2.5],M4:[0.7,3.3],M5:[0.8,4.2],M6:[1,5],M8:[1.25,6.8],M10:[1.5,8.5],M12:[1.75,10.2],M14:[2,12],M16:[2,14],M18:[2.5,15.5],M20:[2.5,17.5],M24:[3,21]};
+const thr=k=>THREADS[k]?{k,p:THREADS[k][0],dr:THREADS[k][1],nom:parseFloat(k.slice(1))}:null;
+const DRILLS=[2,2.5,3,3.3,3.5,4,4.2,4.5,5,5.5,6,6.5,6.8,7,7.5,8,8.5,9,9.5,10,10.2,10.5,11,11.5,12,12.5,13,14,15,15.5,16,17,17.5,18,19,20];
+function threadGuess(D){
+  for(const k in THREADS){ const t=thr(k); if(Math.abs(D-t.dr)<=0.15) return {...t,how:'drill'}; }
+  for(const k in THREADS){ const t=thr(k); if(Math.abs(D-t.nom)<=0.25) return {...t,how:'nominal'}; }
+  return null;
+}
+const millsSorted=()=>S.tools.filter(t=>['flat','bull'].includes(CAM.toolGeom(t).g)&&!['face','tap'].includes(t.type)).sort((a,b)=>b.d-a.d);
+function defaultHoleProc(D,f){
+  const m=millsSorted(), fits=m.find(t=>t.d<D*0.9&&t.d>=D*0.35);
+  if(D>20){ return fits?{spot:false,pilot:false,main:'helix',tap:false}:{main:'pocket',spot:false,pilot:false,tap:false}; }
+  if(!f.through&&!f.cone&&fits) return {spot:false,pilot:false,main:'helix',tap:false};
+  return {spot:true,pilot:D>=12,main:'drill',tap:false};
+}
+// geometria assoluta di un elemento (salvato rispetto al modello, che può spostarsi con margini e sovrametallo)
+function featAbs(f){
+  const bx=model.bb.mn[0], by=model.bb.mn[1], zt=model.bb.mx[2], T=S.stock.t;
+  const depth=f.through?T+0.3:Math.max(0.05,f.d-zt), top=(f.top||0)+zt;
+  if(f.kind==='hole') return {cx:f.x+bx,cy:f.y+by,r:f.r,depth,top};
+  const mv=P=>P.map(q=>[q[0]+bx,q[1]+by]);
+  if(f.kind==='outer') return {loops:f.loops.map(mv),depth:T+0.3,top:0};
+  return {pts:mv(f.pts),islands:(f.islands||[]).map(mv),depth,top};
+}
+// il laser taglia bene solo i fori con diametro almeno pari allo spessore: i fori più piccoli si forano comunque
+const minLaserD=()=>Math.max(3,model?modelH():S.stock.t);
+// grezzo cambiato (blocco ↔ laser): i fori/scavi passanti già vuoti nel profilo laser non vanno lavorati
+function relaserFeats(){
+  if(!model||!S.feats||!S.feats.length) return;
+  const blank=S.stock.kind==='profile'?CAM.blankRegion(S,model):null, bx=model.bb.mn[0], by=model.bb.mn[1];
+  const inB=(x,y)=>{ let c=false; for(const L of blank) for(let i=0,j=L.length-1;i<L.length;j=i++){ const a=L[i],b=L[j]; if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0]) c=!c; } return c; };
+  let n=0;
+  for(const f of S.feats){
+    if(f.kind==='outer'){ if(S.stock.kind==='profile'&&f.proc.main!=='none'){ f._proc=f.proc; f.proc={main:'none'}; f.laser=true; n++; } else if(S.stock.kind!=='profile'&&f.laser){ f.proc=f._proc||{main:'contour'}; delete f._proc; delete f.laser; n++; } continue; }
+    if(f.kind!=='hole'&&f.kind!=='pocket') continue;
+    let lz=false;
+    if(blank&&blank.length&&f.through&&(f.kind!=='hole'||2*f.r>=minLaserD())){
+      const P=f.kind==='hole'?[[f.x,f.y],[f.x+f.r*0.5,f.y],[f.x,f.y+f.r*0.5]]:(()=>{ const Q=f.pts, mx=Q.reduce((a,q)=>a+q[0],0)/Q.length, my=Q.reduce((a,q)=>a+q[1],0)/Q.length, k=Math.max(1,Math.floor(Q.length/8)); return Q.filter((q,i)=>i%k===0).map(q=>[q[0]*0.85+mx*0.15,q[1]*0.85+my*0.15]); })();
+      lz=P.every(q=>!inB(q[0]+bx,q[1]+by));
+    }
+    if(lz&&!f.laser){ f._proc=f.proc; f.proc=f.kind==='hole'?{spot:false,pilot:false,main:'none',tap:false}:{main:'none',allow:0.3}; f.laser=true; n++; }
+    else if(!lz&&f.laser){ f.proc=f._proc||(f.kind==='hole'?defaultHoleProc(2*f.r,f):{main:'pocket',allow:0.3}); delete f._proc; delete f.laser; n++; }
+  }
+  if(n){ changed('ops'); toast(S.stock.kind==='profile'?`${n} element${n===1?"o è già tagliato":"i sono già tagliati"} dal laser: non verranno lavorati.`:`${n} element${n===1?"o torna":"i tornano"} da lavorare (grezzo a blocco).`); }
+}
 function runRecognize(){
   if(!model){ toast('Apri prima un modello 3D.'); return; }
-  busy(true,'Riconoscimento di fori e tasche…');
+  busy(true,'Riconoscimento di fori e scavi…');
   setTimeout(()=>{
     try{
-      const r=CAM.recognize(model,S), geo=t=>CAM.toolGeom(t).g;
-      S.sketch=S.sketch.filter(e=>!e.feat); S.ops=S.ops.filter(o=>!o.feat);
-      const mills=S.tools.filter(t=>['flat','bull'].includes(geo(t))&&t.type!=='face').sort((a,b)=>b.d-a.d);
-      const drills=S.tools.filter(t=>geo(t)==='drill');
-      if(!mills.length&&!drills.length){ busy(false); toast('Aggiungi almeno una fresa cilindrica o una punta per creare le lavorazioni.'); return; }
-      const fx=v=>+v.toFixed(4), it=v=>String(+v.toFixed(2)).replace('.',',');
-      const pockets=[], groups=new Map(); let noFit=0;
+      const r=CAM.recognize(model,S), bx=model.bb.mn[0], by=model.bb.mn[1], zt=model.bb.mx[2];
+      const rel=d=>d+zt, mvr=P=>P.map(q=>[+(q[0]-bx).toFixed(4),+(q[1]-by).toFixed(4)]);
+      const feats=[];
+      // grezzo laser: fori e scavi passanti che nel grezzo sono già vuoti sono stati tagliati dal laser → non si lavorano
+      const blank=S.stock.kind==='profile'?CAM.blankRegion(S,model):null;
+      const inBlank=(x,y)=>{ let c=false; for(const L of blank) for(let i=0,j=L.length-1;i<L.length;j=i++){ const a=L[i],b=L[j]; if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0]) c=!c; } return c; };
+      const cut=(through,pts)=>!!(blank&&blank.length&&through&&pts.every(q=>!inBlank(q[0],q[1])));
+      let nLaser=0;
       for(const f of r.feats){
-        if(f.kind==='hole'&&mills.length&&2*f.circ.r>3*mills[0].d+0.1&&!f.cone){
-          // foro molto più grande delle frese: si svuota come tasca tonda
-          const e={id:uid(),type:'circle',cx:fx(f.circ.cx),cy:fx(f.circ.cy),r:fx(f.circ.r),feat:true}; S.sketch.push(e);
-          pockets.push({id:uid(),type:'pocket',feat:true,fromHole:true,on:true,autoP:true,tool:mills[0].id,
-            name:`Foro Ø${it(2*f.circ.r)} ${f.through?'passante':'prof. '+it(f.depth)} (svuotato)`,
-            p:{depth:+f.depth.toFixed(3),stepdown:2,stepover:40,climb:true,allow:0,combine:'islands'},targets:[e.id]});
-        } else if(f.kind==='hole'){
-          const e={id:uid(),type:'circle',cx:fx(f.circ.cx),cy:fx(f.circ.cy),r:fx(f.circ.r),feat:true}; S.sketch.push(e);
-          const D=2*f.circ.r, key=[D.toFixed(2),f.depth.toFixed(2),f.through,f.cone].join('|');
-          if(!groups.has(key)) groups.set(key,{D,f,ids:[]}); groups.get(key).ids.push(e.id);
-        } else if(f.kind==='step'){
-          const ids=[], add=pts=>{ const e={id:uid(),type:'poly',closed:true,pts:pts.map(p=>[fx(p[0]),fx(p[1])]),feat:true}; S.sketch.push(e); ids.push(e.id); };
-          add(f.H.pts); f.islands.forEach(L=>add(L.pts));
-          const tool=mills[0]||drills[0];
-          pockets.push({id:uid(),type:'pocket',feat:true,on:true,autoP:true,tool:tool.id,step:true,
-            name:`Ribasso esterno prof. ${it(f.depth)}`,
-            p:{depth:+f.depth.toFixed(3),stepdown:2,stepover:50,climb:true,allow:0,combine:'islands'},targets:ids});
-        } else {
-          const ids=[], add=pts=>{ const e={id:uid(),type:'poly',closed:true,pts:pts.map(p=>[fx(p[0]),fx(p[1])]),feat:true}; S.sketch.push(e); ids.push(e.id); };
-          add(f.H.pts); f.islands.forEach(L=>add(L.pts));
-          let tool=mills.find(t=>CAM.offsetPaths([f.H.pts],-t.d/2).length>0);
-          if(!tool){ tool=mills[mills.length-1]||drills[0]; noFit++; }
-          pockets.push({id:uid(),type:'pocket',feat:true,on:true,autoP:true,tool:tool.id,
-            name:`Tasca prof. ${it(f.depth)}${f.through?' (passante)':''}`,
-            p:{depth:+f.depth.toFixed(3),stepdown:2,stepover:40,climb:true,allow:0,combine:'islands'},targets:ids});
-        }
+        if(f.kind==='hole'){ const D=2*f.circ.r, c=f.circ, lz=D>=minLaserD()&&cut(f.through,[[c.cx,c.cy],[c.cx+c.r*0.5,c.cy],[c.cx,c.cy+c.r*0.5]]); if(lz) nLaser++;
+          feats.push({id:uid(),kind:'hole',x:+(c.cx-bx).toFixed(4),y:+(c.cy-by).toFixed(4),r:+c.r.toFixed(4),d:rel(f.depth),top:+(f.top-zt).toFixed(4),through:f.through,cone:f.cone,laser:lz||undefined,proc:lz?{spot:false,pilot:false,main:'none',tap:false}:defaultHoleProc(D,f)}); }
+        else { const P=f.H.pts, k=Math.max(1,Math.floor(P.length/8)), mx=P.reduce((a,q)=>a+q[0],0)/P.length, my=P.reduce((a,q)=>a+q[1],0)/P.length, smp=P.filter((q,i)=>i%k===0).map(q=>[q[0]*0.85+mx*0.15,q[1]*0.85+my*0.15]);
+          const lz=f.kind!=='step'&&cut(f.through,smp); if(lz) nLaser++;
+          feats.push({id:uid(),kind:f.kind==='step'?'step':'pocket',pts:mvr(P),islands:f.islands.map(L=>mvr(L.pts)),d:rel(f.depth),top:+(f.top-zt).toFixed(4),through:f.through,laser:lz||undefined,proc:{main:lz?'none':'pocket',allow:0.3}}); }
       }
-      pockets.sort((a,b)=>a.p.depth-b.p.depth);
-      const holes=[];
-      for(const {D,f,ids} of groups.values()){
-        // punta dello stesso diametro se c'è e il foro non ha fondo piano, altrimenti fresa in elica
-        const dr=drills.find(t=>Math.abs(t.d-D)<=0.03);
-        const flatBottom=!f.through&&!f.cone;
-        let tool=(!flatBottom&&dr)||mills.find(t=>t.d<D-0.1)||dr||mills[mills.length-1];
-        const isDr=geo(tool)==='drill';
-        holes.push({id:uid(),type:'drill',feat:true,on:true,autoP:true,tool:tool.id,
-          name:`Fori Ø${it(D)} ${f.through?'passanti':'prof. '+it(f.depth)} (${ids.length})`,
-          p:{depth:+f.depth.toFixed(3),peck:3,pitch:1,full:isDr&&f.through},targets:ids});
-      }
-      const extra=[];
-      const stockBigger=S.stock.kind!=='profile'&&(!S.stock.auto||(+S.stock.margin||0)>0.05);
-      if(r.outers.length&&stockBigger&&mills.length){
-        const ids=r.outers.map(L=>{ const e={id:uid(),type:'poly',closed:true,pts:L.pts.map(p=>[fx(p[0]),fx(p[1])]),feat:true}; S.sketch.push(e); return e.id; });
-        extra.push({id:uid(),type:'profile',feat:true,on:true,autoP:true,tool:mills[0].id,name:'Contorno esterno (dal modello)',
-          p:{side:'outside',depth:+(-r.zBot+0.3).toFixed(3),stepdown:3,climb:true,tabs:4,tabW:6,tabH:1.5,allow:0},targets:ids});
-      }
-      let off3d=0;
+      const bigger=S.stock.kind!=='profile'&&S.stock.auto&&(+S.stock.margin||0)>0.05||S.stock.kind!=='profile'&&!S.stock.auto&&(S.stock.w>model.bb.mx[0]-model.bb.mn[0]+0.1||S.stock.h>model.bb.mx[1]-model.bb.mn[1]+0.1);
+      if(r.outers.length&&bigger) feats.push({id:uid(),kind:'outer',loops:r.outers.map(L=>mvr(L.pts)),proc:{main:'contour'}});
+      // le lavorazioni fatte dal vecchio riconoscimento (senza processo) vengono sostituite
+      S.ops=S.ops.filter(o=>!o.feat); S.sketch=S.sketch.filter(e=>!e.feat);
+      S.feats=feats; featSel.clear();
+      let off3d=0, add3d=false;
       if(r.prismatic&&!r.skipped3d.length) S.ops.forEach(o=>{ if((o.type==='rough3d'||o.type==='finish3d')&&o.on){ o.on=false; off3d++; } });
-      S.ops.push(...pockets,...holes,...extra);
-      const nh=r.feats.filter(f=>f.kind==='hole').length, np=pockets.filter(o=>!o.step&&!o.fromHole).length, ns=pockets.filter(o=>o.step).length, nOps=pockets.length+holes.length+extra.length;
-      const parts=[]; if(nh) parts.push(`${nh} for${nh===1?'o':'i'}`); if(np) parts.push(`${np} tasc${np===1?'a':'he'}`); if(ns) parts.push(`${ns} ribass${ns===1?'o':'i'} estern${ns===1?'o':'i'}`); if(extra.length) parts.push('il contorno esterno');
-      let msg = nOps ? `Trovati ${parts.join(', ').replace(/, ([^,]*)$/,' e $1')}: ${nOps===1?'creata 1 lavorazione':`create ${nOps} lavorazioni`}.` : 'Nessun foro, tasca o ribasso riconosciuto dall\'alto. Controlla la faccia d\'appoggio del pezzo.';
+      if(r.skipped3d.length&&!S.ops.some(o=>o.type==='rough3d'||o.type==='finish3d')){ ensure3DOps(); add3d=true; }
+      setupDone('feats');
+      const nh=feats.filter(f=>f.kind==='hole').length, np=feats.filter(f=>f.kind==='pocket').length, ns=feats.filter(f=>f.kind==='step').length;
+      const parts=[]; if(nh) parts.push(`${nh} for${nh===1?'o':'i'}`); if(np) parts.push(`${np} tasc${np===1?'a':'he'}`); if(ns) parts.push(`${ns} ribass${ns===1?'o':'i'}`);
+      let msg=parts.length?`Trovati ${parts.join(', ').replace(/, ([^,]*)$/,' e $1')}. Seleziona quelli uguali e scegli come lavorarli.`:'Nessun foro o scavo riconosciuto dall\'alto. Controlla la faccia d\'appoggio.';
+      if(nLaser) msg+=` ${nLaser} già tagliat${nLaser===1?'o':'i'} dal laser: impostat${nLaser===1?'o':'i'} su "Non lavorare".`;
       if(off3d) msg+=' Il pezzo è prismatico: sgrossatura e finitura 3D disattivate.';
-      if(r.skipped3d.length) msg+=` ${r.skipped3d.length} zon${r.skipped3d.length===1?'a':'e'} con superfici curve o inclinate restano alle lavorazioni 3D.`;
-      if(noFit) msg+=` ${noFit} tasch${noFit===1?'a è troppo stretta':'e sono troppo strette'} per le frese disponibili.`;
-      busy(false); changed('ops'); setTab('ops'); toast(msg);
+      if(r.skipped3d.length) msg+=` ${r.skipped3d.length} zon${r.skipped3d.length===1?'a':'e'} con superfici curve restano alle lavorazioni 3D${add3d?', che ho aggiunto':''}.`;
+      busy(false); quietTools=true; changed('ops'); quietTools=false; if(toolsMsg) msg+=' '+toolsMsg; setTab('ops'); toast(msg);
     }catch(e){ busy(false); toast('Riconoscimento non riuscito: '+e.message); }
   },30);
+}
+
+/* ---------- lavorazioni generate da: spianatura Z, contornatura laser, fori e scavi ---------- */
+let newTools=[], toolsMsg='', quietTools=false;
+function findTool(spec){
+  let t=S.tools.find(x=>x.type===spec.type&&Math.abs(x.d-spec.d)<0.011&&(spec.type!=='tap'||Math.abs((+x.pitch||0)-spec.pitch)<1e-6));
+  if(t) return t;
+  const n=Math.max(0,...S.tools.map(x=>x.num))+1;
+  t={id:uid(),num:n,auto:true,plungePct:spec.type==='tap'?100:30,edge:'up',fz:0.05,vc:50,cr:0,...spec}; S.tools.push(t); newTools.push(t); return t;
+}
+const drillTool=d=>findTool({type:'drill',d:+d,angle:118,z:2,tmat:'carbide',name:`Punta Ø${nd(d)}`});
+function millFor(maxD,minD=0){ const m=millsSorted(); return m.find(t=>t.d<=maxD&&t.d>=minD)||m.find(t=>t.d<=maxD)||m[m.length-1]||null; }
+function millForPoly(P){ const m=millsSorted(); return m.find(t=>CAM.offsetPaths([P],-t.d/2-0.05).length>0)||m[m.length-1]||null; }
+function syncGen(){
+  if(!S.feats) S.feats=[];
+  newTools=[];
+  S.sketch=S.sketch.filter(e=>!(e.feat&&String(e.id).startsWith('F_')));
+  const gens=[], G2=(key,rank,type,name,tool,p,fixed,targets)=>{ if(!tool) return; let g=gens.find(x=>x.key===key); if(g){ targets.forEach(t=>g.targets.push(t)); g.n++; return; } gens.push({key,rank,type,name,tool:tool.id,p,fixed,targets:[...targets],n:1}); };
+  const T=S.stock.t, laser=S.stock.kind==='profile', zA=model?Math.max(0,T-modelH()):0;
+  // spianatura del sovrametallo in Z
+  if(model&&S.zface&&S.zface.on&&zA>0.001){
+    const tl=S.tools.find(t=>t.type==='face')||millsSorted()[0];
+    G2('face',10,'face','Spianatura sovrametallo Z',tl,{stepover:70,dir:'x'},{depth:+zA.toFixed(3),stepdown:+Math.min(+S.zface.stepdown||zA,zA).toFixed(3),region:laser?'profile':'all'},[]);
+  }
+  // contornatura del profilo laser
+  if(laser&&S.stock.contour){ const tl=millFor(12)||millsSorted()[0]; G2('trim',20,'trim','Contornatura profilo laser',tl,{stepdown:+(T+0.2).toFixed(2),radial:0.5,climb:true},{depth:+(T+0.2).toFixed(2)},[]); }
+  if(model) for(const f of S.feats){
+    const A=featAbs(f), pr=f.proc||{}, gk=f.grp?'|g'+f.grp:'', gn=f.grp?' · gruppo '+f.grp:'';
+    if(f.kind==='hole'){
+      const id='F_'+f.id; S.sketch.push({id,type:'circle',cx:+A.cx.toFixed(4),cy:+A.cy.toFixed(4),r:A.r,feat:true});
+      const D=2*A.r, th=pr.tap?thr(pr.thread):null, dd=th?(Math.abs(D-th.nom)<0.3?th.dr:D):D, dep=+A.depth.toFixed(2), thru=!!f.through, dpt=nd(+(f.d-(f.top||0)).toFixed(2));
+      if(pr.spot){ const spD=+(pr.spotD||Math.min((th?th.nom:dd)+0.4,dd>15?3:9.5)).toFixed(2), tl=findTool(spD>9.5?{type:'spot',d:16,angle:90,z:2,tmat:'carbide',name:'Punta da centri Ø16 90°'}:{type:'spot',d:10,angle:90,z:2,tmat:'carbide',name:'Punta da centri Ø10 90°'});
+        const sd=+(spD/2/Math.tan((tl.angle||90)/2*Math.PI/180)).toFixed(2); G2(`spot|${tl.id}|${sd}${gk}`,40,'drill','Centrinatura'+gn,tl,{peck:0,pitch:1},{depth:sd,full:false},[id]); }
+      if(pr.pilot&&pr.main==='drill'){ const pd=+(pr.pilotD||DRILLS.filter(x=>x<=dd*0.55).pop()||2.5); G2(`pilot|${pd}|${dep}|${thru}${gk}`,50,'drill',`Preforo Ø${nd(pd)}${gn}`,drillTool(pd),{peck:Math.max(1,+(pd*1.5).toFixed(1))},{depth:dep,full:thru},[id]); }
+      if(pr.main==='drill') G2(`drill|${dd}|${dep}|${thru}${gk}`,60,'drill',`Foratura Ø${nd(dd)} ${thru?'passante':'prof. '+dpt}${gn}`,drillTool(dd),{peck:Math.max(1,+(dd*1.5).toFixed(1))},{depth:dep,full:thru},[id]);
+      else if(pr.main==='helix'){ const tl=millFor(D*0.9,D*0.3); G2(`helix|${D.toFixed(2)}|${dep}${gk}`,65,'drill',`Fresatura fori Ø${nd(+D.toFixed(2))}${gn}`,tl,{peck:3,pitch:tl?+(tl.d/3).toFixed(2):1},{depth:dep,full:false},[id]); }
+      else if(pr.main==='pocket'){ const tl=millFor(D*0.8); G2(`hpk|${D.toFixed(2)}|${dep}${gk}`,30,'pocket',`Svuotatura fori Ø${nd(+D.toFixed(2))}${gn}`,tl,{stepdown:2,stepover:40,climb:true},{depth:dep,combine:'islands',allow:0},[id]); }
+      if(th){ const tdp=+(pr.tapDepth||(thru?T+2*th.p:Math.max(2*th.p,A.depth-3*th.p))).toFixed(2);
+        G2(`tap|${th.k}|${tdp}${gk}`,80,'tap',`Maschiatura ${th.k}${gn}`,findTool({type:'tap',d:th.nom,pitch:th.p,z:1,tmat:'hss',name:`Maschio ${th.k}×${nd(th.p)}`}),{},{depth:tdp},[id]); }
+    } else if(f.kind==='outer'){
+      const ids=A.loops.map((L,k)=>{ const id='F_'+f.id+'_'+k; S.sketch.push({id,type:'poly',closed:true,pts:L,feat:true}); return id; });
+      if(pr.main==='contour') G2('outer',90,'profile','Contorno esterno',millsSorted()[0],{stepdown:3,climb:true,tabs:4,tabW:6,tabH:1.5,allow:0},{depth:+(T+0.3).toFixed(2),side:'outside',combine:'union'},ids);
+    } else {
+      const oid='F_'+f.id, iids=A.islands.map((L,k)=>'F_'+f.id+'_i'+k);
+      if(f.kind!=='step') S.sketch.push({id:oid,type:'poly',closed:true,pts:A.pts,feat:true});
+      A.islands.forEach((L,k)=>S.sketch.push({id:iids[k],type:'poly',closed:true,pts:L,feat:true}));
+      if(f.kind==='step') S.sketch.push({id:oid,type:'poly',closed:true,pts:A.pts,feat:true});
+      const dep=+A.depth.toFixed(2), nm=f.kind==='step'?'Ribasso':'Tasca', tl=millForPoly(A.pts), dpt=f.through?'passante':'prof. '+nd(+(f.d-(f.top||0)).toFixed(2));
+      if(pr.main==='pocket'||pr.main==='pocket_finish') G2(`pk|${f.id}`,30,'pocket',`${nm} ${dpt}`,tl,{stepdown:2,stepover:f.kind==='step'?50:40,climb:true},{depth:dep,combine:'islands',allow:pr.main==='pocket_finish'?+(pr.allow??0.3):0},[oid,...iids]);
+      if(pr.main==='pocket_finish'){
+        if(f.kind!=='step') G2(`pf|${f.id}`,35,'profile',`Finitura pareti ${nm.toLowerCase()} ${dpt}`,tl,{stepdown:dep,climb:true,tabs:0,allow:0},{depth:dep,side:'inside',combine:'separate'},[oid]);
+        if(iids.length) G2(`pfi|${f.id}`,36,'profile',`Finitura isole ${nm.toLowerCase()} ${dpt}`,tl,{stepdown:dep,climb:true,tabs:0,allow:0},{depth:dep,side:'outside',combine:'separate'},iids);
+      }
+      if(pr.main==='contour') G2(`pc|${f.id}`,30,'profile',`Scontornatura ${nm.toLowerCase()} ${dpt}`,tl,{stepdown:2,climb:true,tabs:f.through?2:0,tabW:4,tabH:1,allow:0},{depth:dep,side:'inside',combine:'separate'},[oid]);
+    }
+  }
+  // unione con le lavorazioni esistenti: le modifiche fatte a mano ai parametri restano
+  const old=new Map(S.ops.filter(o=>o.gen).map(o=>[o.gen,o])), firstIdx=S.ops.findIndex(o=>o.gen);
+  const before=firstIdx<0?0:S.ops.slice(0,firstIdx).filter(o=>!o.gen).length, manual=S.ops.filter(o=>!o.gen);
+  gens.sort((a,b)=>a.rank-b.rank||a.key.localeCompare(b.key));
+  const fresh=gens.map(g=>{
+    const nm=g.n>1&&!/^(Spianatura|Contornatura|Contorno)/.test(g.name)?`${g.name} (${g.n})`:g.name;
+    const o=old.get(g.key);
+    if(o){ o.targets=g.targets; Object.assign(o.p,g.fixed); if(!S.tools.some(t=>t.id===o.tool)) o.tool=g.tool; if(o.name===o._an){ o.name=nm; } o._an=nm; return o; }
+    return {id:uid(),gen:g.key,type:g.type,name:nm,_an:nm,tool:g.tool,on:true,autoP:true,p:{...g.p,...g.fixed},targets:g.targets};
+  });
+  S.ops=[...manual.slice(0,before),...fresh,...manual.slice(before)];
+  if(newTools.length) toolsMsg='Aggiunti utensili: '+newTools.map(t=>`T${t.num} ${t.name}`).join(', ')+'.';
+}
+
+/* ---------- pannello fori e scavi ---------- */
+const PROC_LBL={drill:'Foratura',helix:'Fresatura elicoidale',pocket:'Fresatura (tasca)',none:'Non lavorare'};
+function procText(f){
+  const pr=f.proc||{};
+  if(f.kind==='hole'){
+    const th=pr.tap?thr(pr.thread):null, D=2*f.r, dd=th?(Math.abs(D-th.nom)<0.3?th.dr:D):D, st=[];
+    if(pr.spot) st.push('Centrino'); if(pr.pilot&&pr.main==='drill') st.push('Preforo');
+    if(pr.main==='drill') st.push('Foratura Ø'+nd(+dd.toFixed(2))); else if(pr.main!=='none') st.push(PROC_LBL[pr.main]);
+    if(f.laser&&!st.length&&!pr.tap) return 'Già tagliato dal laser';
+    if(th) st.push('Maschiatura '+th.k);
+    return st.length?st.join(' → '):'Non lavorato';
+  }
+  if(f.kind==='outer') return pr.main==='contour'?'Contorno esterno':f.laser?'Già tagliato dal laser':'Non lavorato';
+  if(f.laser&&pr.main==='none') return 'Già tagliato dal laser';
+  return {pocket:'Tasca',pocket_finish:'Tasca + finitura pareti',contour:'Scontornatura interna','3d':'Lasciato al 3D',none:'Non lavorato'}[pr.main]||'';
+}
+function featGeomText(f){
+  if(f.kind==='hole') return `Ø${nd(+(2*f.r).toFixed(2))} ${f.through?'passante':'prof. '+nd(+(f.d-(f.top||0)).toFixed(2))+(f.cone?' alla punta':'')}`;
+  if(f.kind==='outer') return 'Contorno esterno del pezzo';
+  const A=model?featAbs(f):null, xs=f.pts.map(q=>q[0]), ys=f.pts.map(q=>q[1]);
+  return `${f.kind==='step'?'Ribasso':'Tasca'} ${f.kind==='step'?'':nd(+(Math.max(...xs)-Math.min(...xs)).toFixed(1))+'×'+nd(+(Math.max(...ys)-Math.min(...ys)).toFixed(1))+' '}${f.through?'passante':'prof. '+nd(+(f.d-(f.top||0)).toFixed(2))}${(f.islands||[]).length?` · ${f.islands.length} isol${f.islands.length===1?'a':'e'}`:''}`;
+}
+function featGroups(){
+  const map=new Map();
+  for(const f of S.feats||[]){ const key=f.kind+'|'+featGeomText(f)+'|'+JSON.stringify(f.proc); if(!map.has(key)) map.set(key,{key,kind:f.kind,ids:[],f}); map.get(key).ids.push(f.id); }
+  return [...map.values()].sort((a,b)=>(a.kind==='hole'?0:a.kind==='outer'?2:1)-(b.kind==='hole'?0:b.kind==='outer'?2:1)||(a.kind==='hole'?a.f.r-b.f.r:0));
+}
+// albero: geometria uguale → varianti (lavorazione o gruppo a parte) → singoli elementi
+const fOpen=new Set(); let featNodes=new Map();
+function featTree(){
+  const geo=new Map();
+  for(const f of S.feats||[]){
+    const k=f.kind+'|'+featGeomText(f); let G=geo.get(k); if(!G){ G={key:k,kind:f.kind,f,ids:[],br:new Map()}; geo.set(k,G); } G.ids.push(f.id);
+    const bk=k+'#'+(f.grp||0)+'#'+JSON.stringify(f.proc||{}); let B=G.br.get(bk); if(!B){ B={key:bk,f,grp:f.grp||0,ids:[]}; G.br.set(bk,B); } B.ids.push(f.id);
+  }
+  const ord=k=>k==='hole'?0:k==='outer'?2:1;
+  return [...geo.values()].map(G=>({...G,br:[...G.br.values()].sort((a,b)=>(a.grp-b.grp)||(b.ids.length-a.ids.length))}))
+    .sort((a,b)=>ord(a.kind)-ord(b.kind)||(a.kind==='hole'?a.f.r-b.f.r:0));
+}
+// posizione dell'elemento rispetto allo zero pezzo
+function featPos(f){
+  const A=featAbs(f); let x=0,y=0;
+  if(f.kind==='hole'){ x=A.cx; y=A.cy; }
+  else { const P=A.pts||(A.loops||[])[0]||[[0,0]]; const xs=P.map(q=>q[0]), ys=P.map(q=>q[1]); x=(Math.min(...xs)+Math.max(...xs))/2; y=(Math.min(...ys)+Math.max(...ys))/2; }
+  const p=CAM.originOf(S).P(x,y,0); return [p[0],p[1]];
+}
+const grpTxt=g=>g?` · gruppo ${g}`:'';
+function featPanel(){
+  const F=S.feats||[];
+  if(!model) return '';
+  if(!F.length) return `<div class="card fpanel"><h3>Fori e scavi</h3><p class="note">Fai riconoscere al programma i fori e gli scavi del modello: poi selezioni quelli uguali e scegli a tutti insieme come lavorarli.</p><div class="row"><button class="btn sm primary" data-act="recognize">Riconosci fori e scavi</button></div></div>`;
+  const tree=featTree(), selF=F.filter(f=>featSel.has(f.id)), byId=new Map(F.map(f=>[f.id,f]));
+  featNodes=new Map();
+  const row=(key,ids,lvl,label,sub,count,exp)=>{
+    featNodes.set(key,ids);
+    const on=ids.every(id=>featSel.has(id)), part=!on&&ids.some(id=>featSel.has(id)), open=fOpen.has(key);
+    return `<button class="frow l${lvl}${on?' on':''}${part?' part':''}" data-act="fsel-node" data-key="${esc(key)}">`+
+      (exp?`<span class="fexp${open?' open':''}" data-act="fexp" data-key="${esc(key)}" title="${open?'Chiudi':'Mostra gli elementi uno per uno'}" aria-expanded="${open}"><svg viewBox="0 0 10 10"><path d="M3 1.5 6.5 5 3 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>`:'<span class="fexp none"></span>')+
+      `<span class="fcb">${on?'✓':part?'–':''}</span>${count!=null?`<span class="fq">${count}×</span>`:''}<span class="fl"><b>${esc(label)}</b>${sub?`<small>${esc(sub)}</small>`:''}</span></button>`;
+  };
+  const elems=(ids,lvl)=>ids.map(id=>byId.get(id)).map(f=>({f,p:featPos(f)})).sort((a,b)=>a.p[1]-b.p[1]||a.p[0]-b.p[0])
+    .map((e,k)=>row('e|'+e.f.id,[e.f.id],lvl,`#${k+1}  X ${fmtNum(+e.p[0].toFixed(2))}  Y ${fmtNum(+e.p[1].toFixed(2))}`,e.f.kind==='hole'&&e.f.through?'':null,null,false)).join('');
+  const rows=tree.map(G=>{
+    const multi=G.br.length>1, one=G.br[0];
+    let h=row(G.key,G.ids,1,featGeomText(G.f),multi?`${G.br.length} varianti: ${G.br.map(b=>b.ids.length+'× '+procText(b.f)+grpTxt(b.grp)).join(' · ')}`:procText(G.f)+grpTxt(one.grp),G.ids.length,G.ids.length>1);
+    if(G.ids.length>1&&fOpen.has(G.key)){
+      if(multi) for(const B of G.br){ h+=row(B.key,B.ids,2,procText(B.f)+grpTxt(B.grp),null,B.ids.length,B.ids.length>1); if(B.ids.length>1&&fOpen.has(B.key)) h+=elems(B.ids,3); else if(B.ids.length===1) featNodes.set('e|'+B.ids[0],B.ids); }
+      else h+=elems(G.ids,2);
+    }
+    return h;
+  }).join('');
+  return `<section class="fpanel">
+    <div><h3>Fori e scavi <span class="cnt">${F.length}</span><button class="btn sm ghost sp" data-act="recognize">Riconosci di nuovo</button></h3></div>
+    <p class="note">Clicca una riga (o un foro sul modello) per selezionarla; con la casella o Maiusc+clic ne aggiungi altre. Con la freccia apri il gruppo e scegli i singoli elementi: quelli che lavori in modo diverso diventano un ramo a parte. Passando sopra una riga, gli elementi si illuminano sul modello.</p>
+    <div class="flist">${rows}</div>
+    ${selF.length?featEditor(selF):''}
+  </section>`;
+}
+// si può separare se fuori dalla selezione resta almeno un elemento uguale (stessa geometria e stesso ramo)
+function canSplit(L){
+  const sel=new Set(L.map(f=>f.id)), keys=new Set(L.map(f=>f.kind+'|'+featGeomText(f)+'#'+(f.grp||0)));
+  return (S.feats||[]).some(f=>!sel.has(f.id)&&keys.has(f.kind+'|'+featGeomText(f)+'#'+(f.grp||0)));
+}
+function featEditor(L){
+  const holes=L.filter(f=>f.kind==='hole'), others=L.filter(f=>f.kind!=='hole');
+  const head=`<div class="fsel"><b>Selezionat${L.length===1?'o':'i'}: ${L.length} ${holes.length===L.length?(L.length===1?'foro':'fori'):others.length===L.length?(L.length===1?'scavo':'scavi'):'elementi'}</b>
+      <button class="btn sm ghost" data-act="fsel-same">Seleziona uguali</button>${canSplit(L)?'<button class="btn sm ghost" data-act="fsplit" title="Gli elementi selezionati formano un gruppo a parte, con lavorazioni proprie, anche se uguali agli altri">Gestisci a parte</button>':''}${L.some(f=>f.grp)?'<button class="btn sm ghost" data-act="fjoin" title="Rimette gli elementi nel gruppo principale con la sua lavorazione">Riunisci</button>':''}<button class="btn sm ghost" data-act="fsel-none">Deseleziona</button></div>`;
+  if(holes.length&&others.length) return `<div class="card fed">${head}<p class="note">Hai selezionato fori e scavi insieme: seleziona solo fori o solo scavi per impostare la lavorazione.</p></div>`;
+  if(others.length){
+    const pr=others[0].proc||{}, isOuter=others.every(f=>f.kind==='outer');
+    const opts=isOuter?[['contour','Contorno esterno'],['none','Non lavorare']]:[['pocket','Tasca (svuotatura)'],['pocket_finish','Tasca + finitura delle pareti'],['contour','Scontornatura interna (solo contorno)'],['3d','Lasciare alle lavorazioni 3D'],['none','Non lavorare']];
+    return `<div class="card fed">${head}
+      <label class="fld"><span>Lavorazione</span><span class="in"><select id="fp-main" data-fp="main">${opts.map(([v,l])=>`<option value="${v}"${pr.main===v?' selected':''}>${l}</option>`).join('')}</select></span></label>
+      ${pr.main==='pocket_finish'?`<label class="fld" style="max-width:180px"><span>Sovrametallo per la finitura</span><span class="in"><input id="fp-allow" class="num" data-fp="allow" type="text" inputmode="decimal" value="${fmtNum(+(pr.allow??0.3))}"><span class="u">mm</span></span></label>`:''}
+      ${pr.main==='contour'&&others.some(f=>f.through)?'<p class="note">Scontornatura passante: il pezzo interno si stacca; lascia i ponticelli (impostati a 2) o fissalo.</p>':''}</div>`;
+  }
+  const pr=holes[0].proc||{}, D=2*holes[0].r, same=holes.every(f=>Math.abs(2*f.r-D)<0.01), g=same?threadGuess(D):null, th=pr.tap?thr(pr.thread||g?.k):null;
+  const P=(v,l)=>`<button class="btn sm${presetOf(pr)===v?' on':''}" data-act="fpreset" data-v="${v}">${l}</button>`;
+  const thOpts=Object.keys(THREADS).map(k=>`<option value="${k}"${(pr.thread||g?.k||'M8')===k?' selected':''}>${k} × ${nd(THREADS[k][0])}</option>`).join('');
+  return `<div class="card fed">${head}
+    <div class="presets">${P('drill','Foratura')}${P('spot_drill','Centrino + foratura')}${P('spot_pilot_drill','Centrino + preforo + foratura')}${P('spot_drill_tap','Centrino + foratura + maschiatura')}${P('spot_pilot_drill_tap','Centrino + preforo + foratura + maschiatura')}${P('helix','Fresatura elicoidale')}${P('pocket','Fresatura tasca')}${P('none','Non lavorare')}</div>
+    ${g&&!pr.tap?`<p class="note thint">Ø${nd(+D.toFixed(2))} ${g.how==='drill'?`è il preforo di un <b>${g.k}</b>`:`corrisponde a un filetto <b>${g.k}</b>`}: se è filettato attiva la maschiatura. <button class="btn sm" data-act="fpreset" data-v="spot_drill_tap" data-th="${g.k}">Imposta ${g.k}</button></p>`:''}
+    <div class="seqed">
+      <label class="chk"><input type="checkbox" data-fp="spot"${pr.spot?' checked':''}>1. Punta da centri</label>
+      ${pr.spot?`<label class="fld sm"><span>Ø svasatura</span><span class="in"><input class="num" data-fp="spotD" type="text" inputmode="decimal" placeholder="auto" value="${pr.spotD?fmtNum(+pr.spotD):''}"><span class="u">mm</span></span></label>`:'<span></span>'}
+      <label class="chk"><input type="checkbox" data-fp="pilot"${pr.pilot?' checked':''} ${pr.main==='drill'?'':'disabled'}>2. Preforo</label>
+      ${pr.pilot&&pr.main==='drill'?`<label class="fld sm"><span>Ø preforo</span><span class="in"><input class="num" data-fp="pilotD" type="text" inputmode="decimal" placeholder="auto" value="${pr.pilotD?fmtNum(+pr.pilotD):''}"><span class="u">mm</span></span></label>`:'<span></span>'}
+      <span class="chk">3. Lavorazione</span>
+      <label class="fld sm"><span class="in"><select data-fp="main">${Object.entries(PROC_LBL).map(([v,l])=>`<option value="${v}"${pr.main===v?' selected':''}>${l}</option>`).join('')}</select></span></label>
+      <label class="chk"><input type="checkbox" data-fp="tap"${pr.tap?' checked':''}>4. Maschiatura</label>
+      ${pr.tap?`<div class="tapf"><label class="fld sm"><span>Filetto</span><span class="in"><select data-fp="thread">${thOpts}</select></span></label><label class="fld sm"><span>Prof. filetto</span><span class="in"><input class="num" data-fp="tapDepth" type="text" inputmode="decimal" placeholder="auto" value="${pr.tapDepth?fmtNum(+pr.tapDepth):''}"><span class="u">mm</span></span></label></div>`:'<span></span>'}
+    </div>
+    ${th&&Math.abs(D-th.dr)>0.15&&Math.abs(D-th.nom)>=0.3?`<p class="warn">Ø${nd(+D.toFixed(2))} non è il preforo di un ${th.k} (servirebbe Ø${nd(th.dr)}).</p>`:''}
+    ${th&&Math.abs(D-th.nom)<0.3?`<p class="note">Il modello mostra il diametro nominale: la foratura usa il preforo Ø${nd(th.dr)}.</p>`:''}
+    <p class="note">Le lavorazioni vengono create in sequenza per tutti i fori selezionati e raggruppate per utensile. Gli utensili mancanti si aggiungono da soli.</p>
+  </div>`;
+}
+function presetOf(pr){
+  if(pr.main==='none'&&!pr.spot&&!pr.tap) return 'none';
+  if(pr.main==='helix'&&!pr.tap) return 'helix'; if(pr.main==='pocket'&&!pr.tap) return 'pocket';
+  if(pr.main==='drill') return (pr.spot?'spot_':'')+(pr.pilot?'pilot_':'')+'drill'+(pr.tap?'_tap':'');
+  return '';
+}
+function applyPreset(v,thK){
+  const L=(S.feats||[]).filter(f=>featSel.has(f.id)&&f.kind==='hole');
+  for(const f of L){
+    const D=2*f.r, g=threadGuess(D), pr={spot:v.startsWith('spot'),pilot:v.includes('pilot'),main:v.includes('drill')?'drill':v,tap:v.endsWith('_tap')};
+    if(pr.tap) pr.thread=thK||f.proc.thread||(g?g.k:'M8');
+    if(v==='none') pr.main='none';
+    f.proc=pr;
+  }
+  changed('ops');
+}
+function featHit(ev){
+  const r=cv.getBoundingClientRect();
+  ray.setFromCamera(new THREE.Vector2((ev.clientX-r.left)/r.width*2-1,-(ev.clientY-r.top)/r.height*2+1),cam);
+  let best=null, bd=Infinity;
+  for(const f of S.feats||[]){
+    if(f.kind==='outer') continue;
+    const A=featAbs(f), z=A.top, o=ray.ray.origin, dv=ray.ray.direction; if(Math.abs(dv.z)<1e-9) continue;
+    const t=(z-o.z)/dv.z; if(t<0) continue; const x=o.x+dv.x*t, y=o.y+dv.y*t;
+    let inside=false, score=t;
+    if(f.kind==='hole'){ const d=Math.hypot(x-A.cx,y-A.cy), tol=Math.max(A.r*1.15,A.r+1.5*pxWorldAt(t)); inside=d<=tol; score=t+d*0.01; }
+    else inside=pip([x,y],A.pts)&&!(A.islands||[]).some(L=>pip([x,y],L));
+    if(inside&&score<bd){ bd=score; best=f; }
+  }
+  return best;
+}
+function pxWorldAt(t){ return cam===ortho?pxWorld():t*2*Math.tan(persp.fov*Math.PI/360)/Math.max(1,viewEl.clientHeight); }
+function pip(p,P){ let c=false; for(let i=0,j=P.length-1;i<P.length;j=i++){ const a=P[i],b=P[j]; if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0]) c=!c; } return c; }
+function featClick(ev){
+  const f=featHit(ev);
+  if(!f){ if(!ev.shiftKey&&featSel.size){ featSel.clear(); buildFeat(); renderOps(); } return; }
+  if(ev.shiftKey||ev.ctrlKey||ev.metaKey) featSel.has(f.id)?featSel.delete(f.id):featSel.add(f.id);
+  else { featSel.clear(); featSel.add(f.id); }
+  buildFeat(); renderOps();
+  requestAnimationFrame(()=>{ const e=document.querySelector('#p-ops .fed'); if(e) e.scrollIntoView({block:'nearest',behavior:'smooth'}); });
+}
+const featVisible=()=>!!(model&&(S.feats||[]).length&&(tab==='ops'||(tab==='stock'&&setupState().open===6)));
+/* ---------- evidenziazione: elementi sotto il cursore (riga della lista o modello) ---------- */
+let hlKey=null, hlIds=null;
+function setHL(ids,key){
+  if(key===hlKey) return;
+  hlKey=key; hlIds=ids&&ids.length?new Set(ids):null; buildHL();
+  // la riga corrispondente si evidenzia anche quando il cursore è sul modello
+  $$('#p-ops .frow[data-key]').forEach(r=>{ const n=featNodes.get(r.dataset.key); r.classList.toggle('hov',!!(hlIds&&key&&key.startsWith('3d|')&&n&&n.length&&n.every(id=>hlIds.has(id)))); });
+}
+function buildHL(){
+  clear(G.hl);
+  if(!hlIds||!featVisible()){ req(); return; }
+  const T=S.stock.t;
+  for(const f of S.feats){
+    if(!hlIds.has(f.id)) continue;
+    const A=featAbs(f);
+    if(f.kind==='outer'){ for(const L of A.loops){ for(const z of [0.05,-T]){ const o=lineObj(L,true,mats.hlL,z); o.renderOrder=31; G.hl.add(o); } } continue; }
+    const top=A.top, zb=Math.max(-T,top-A.depth), h=Math.max(0.3,top-zb);
+    let m;
+    if(f.kind==='hole'){
+      const g=new THREE.CylinderGeometry(A.r,A.r,h,48,1,false); g.rotateX(Math.PI/2); m=new THREE.Mesh(g,mats.hlF); m.position.set(A.cx,A.cy,top-h/2);
+      for(const z of [top+0.05,zb]){ const o=lineObj(entPoly({type:'circle',cx:A.cx,cy:A.cy,r:A.r}).pts,true,mats.hlL,z); o.renderOrder=31; G.hl.add(o); }
+      // alone attorno ai fori piccoli, per trovarli anche a vista intera
+      for(const k of [1.9,2.6]){ const o=lineObj(entPoly({type:'circle',cx:A.cx,cy:A.cy,r:Math.max(A.r*k,A.r+2*k)}).pts,true,mats.hlL,top+0.05); o.renderOrder=31; G.hl.add(o); }
+    } else {
+      const sh=new THREE.Shape(A.pts.map(q=>new THREE.Vector2(q[0],q[1])));
+      (A.islands||[]).forEach(L=>sh.holes.push(new THREE.Path(L.map(q=>new THREE.Vector2(q[0],q[1])))));
+      const g=new THREE.ExtrudeGeometry(sh,{depth:h,bevelEnabled:false,curveSegments:1}); m=new THREE.Mesh(g,mats.hlF); m.position.z=zb;
+      for(const L of [A.pts,...(A.islands||[])]){ const o=lineObj(L,true,mats.hlL,top+0.05); o.renderOrder=31; G.hl.add(o); }
+    }
+    m.renderOrder=30; G.hl.add(m);
+  }
+  req();
+}
+let fhRaf=0;
+function featHover(ev){
+  if(fhRaf) return; const e={clientX:ev.clientX,clientY:ev.clientY};
+  fhRaf=requestAnimationFrame(()=>{ fhRaf=0; if(drag||pick||!featVisible()||tab!=='ops'){ if(hlKey&&hlKey.startsWith('3d|')) setHL(null,null); return; }
+    const f=featHit(e); cv.style.cursor=f?'pointer':''; setHL(f?[f.id]:null,f?'3d|'+f.id:null); });
+}
+function buildFeat(){
+  clear(G.feat);
+  const showF=featVisible();
+  if(!showF){ clear(G.hl); hlKey=null; hlIds=null; req(); return; }
+  const cOn=col('--accent'), cDo=col('--feed'), cNo=col('--faint');
+  const mk=c=>new THREE.LineBasicMaterial({color:c,depthTest:false,transparent:true});
+  const mOn=mk(cOn), mDo=mk(cDo), mNo=mk(cNo);
+  for(const f of S.feats){
+    if(f.kind==='outer') continue;
+    const A=featAbs(f), on=featSel.has(f.id), none=procText(f)==='Non lavorato', m=on?mOn:none?mNo:mDo, z=A.top+0.05;
+    if(f.kind==='hole'){
+      const o=lineObj(entPoly({type:'circle',cx:A.cx,cy:A.cy,r:A.r}).pts,true,m,z); o.renderOrder=10; G.feat.add(o);
+      const L=A.r*1.5+1.5, g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(A.cx-L,A.cy,z),new THREE.Vector3(A.cx+L,A.cy,z),new THREE.Vector3(A.cx,A.cy-L,z),new THREE.Vector3(A.cx,A.cy+L,z)]);
+      const x=new THREE.LineSegments(g,m); x.renderOrder=10; G.feat.add(x);
+      if(on){ const o2=lineObj(entPoly({type:'circle',cx:A.cx,cy:A.cy,r:A.r+0.8}).pts,true,m,z); o2.renderOrder=10; G.feat.add(o2); }
+    } else {
+      const o=lineObj(A.pts,true,m,z); o.renderOrder=10; G.feat.add(o);
+      if(on){ const o2=lineObj(CAM.offsetPaths([A.pts],0.8)[0]||A.pts,true,m,z); o2.renderOrder=10; G.feat.add(o2); }
+    }
+  }
+  if(hlIds) buildHL(); else req();
 }
 
 /* ====================== CALCOLO ====================== */
 let genT=null, genRun=0;
 function changed(what,now){
+  toolsMsg='';
+  if(model&&((S.feats||[]).length||(S.zface&&S.zface.on)||S.stock.contour||S.ops.some(o=>o.gen))) syncGen();
+  else if(!model&&S.ops.some(o=>o.gen)) syncGen();
+  if(toolsMsg&&!quietTools) setTimeout(()=>toast(toolsMsg+' Controllali nella scheda Lavorazioni.'),30);
   deriveTools();
   if(S.stock.kind==='profile'&&(what==='sketch'||what==='model')) applyBlank();
   save();
   if(what==='sketch'||what==='model'||what==='stock'){ buildStock(); buildSketch(); if(what!=='sketch') buildModel(); }
-  renderPanes(); req();
+  renderPanes(); buildFeat(); req();
   clearTimeout(genT); genT=setTimeout(generate, now?0:350);
 }
 async function generate(){
@@ -1856,7 +2434,7 @@ async function generate(){
   if(run!==genRun) return;
   try{
     prog=CAM.buildProgram(S,model,getHM,opCache);
-    if(opCache.size>24) opCache.clear();
+    for(const k of [...opCache.keys()]) if(!opCache.used.has(k)) opCache.delete(k);
     gc=CAM.writeGcode(S,prog);
   }catch(e){ toast('Errore nel calcolo: '+e.message); }
   busy(false);
@@ -1868,16 +2446,19 @@ async function generate(){
 const MR={res:0.5,nx:0,ny:0,Z:null,mask:null,I:null,bottom:0,key:'',done:0,seg:0,target:0,geo:null,side:null,perim:null,kern:new Map(),dirty:null,crash:null,busy:false,holeChg:false};
 function matPrepare(resetCut){
   const {w,h,t}=S.stock, blank=S.stock.kind==='profile'?CAM.blankRegion(S,model):null;
-  const key=JSON.stringify([w,h,t,blank?blank.map(L=>L.map(p=>[+p[0].toFixed(3),+p[1].toFixed(3)])):0]);
-  if(MR.key!==key||!MR.Z){
-    MR.key=key; MR.res=Math.max(0.2,Math.sqrt(w*h/160000));
+  // la sagoma laser è memorizzata: se è lo stesso oggetto non serve confrontarla punto per punto
+  const key=w+'|'+h+'|'+t; let fresh=false;
+  if(MR.key!==key||MR.blankRef!==blank||!MR.Z){
+    fresh=true; MR.key=key; MR.blankRef=blank; MR.res=Math.max(0.2,Math.sqrt(w*h/160000));
     MR.nx=Math.floor(w/MR.res)+1; MR.ny=Math.floor(h/MR.res)+1; MR.bottom=-t;
     MR.Z=new Float32Array(MR.nx*MR.ny); MR.kern.clear();
     MR.mask=blank&&blank.length?CAM.rasterRegion(blank,MR.nx,MR.ny,MR.res):null;
     resetCut=true;
   }
   if(resetCut) matReset();
-  buildMatMesh();
+  // la mesh del grezzo si ricrea solo se cambia la griglia o il materiale (tema/qualità); altrimenti si aggiorna e basta
+  if(fresh||!MR.mesh||MR.mesh.material!==mats.matTop||MR.mesh.parent!==G.mat) buildMatMesh();
+  else if(resetCut) matFlush();
 }
 function matReset(){
   MR.crashShown=false;
@@ -1896,7 +2477,7 @@ function buildMatMesh(){
   g.setAttribute('normal',new THREE.BufferAttribute(new Float32Array(n*3),3));
   g.setAttribute('color',new THREE.BufferAttribute(new Float32Array(n*3),3));
   g.setIndex(new THREE.BufferAttribute(MR.I,1));
-  MR.geo=g; G.mat.add(new THREE.Mesh(g,mats.matTop));
+  MR.geo=g; MR.mesh=new THREE.Mesh(g,mats.matTop); MR.mesh.frustumCulled=false; G.mat.add(MR.mesh); MR.pend=null;
   MR.side=null; MR.perim=null;
   if(!MR.mask){
     // pareti del blocco rettangolare: seguono il bordo della mappa
@@ -1938,9 +2519,13 @@ function matFlush(){
       else { Cc[k]=ct.r; Cc[k+1]=ct.g; Cc[k+2]=ct.b; }
     }
   }
-  MR.geo.attributes.position.needsUpdate=true; MR.geo.attributes.normal.needsUpdate=true; MR.geo.attributes.color.needsUpdate=true;
-  MR.geo.boundingSphere=null;
-  if(MR.holeChg){ MR.holeChg=false; rebuildIndex(); }
+  // si caricano sulla scheda grafica solo le righe cambiate, non tutta la griglia
+  const off=j0*nx*3, cnt=(j1-j0+1)*nx*3;
+  const pd=MR.pend=MR.pend?[Math.min(MR.pend[0],off),Math.max(MR.pend[1],off+cnt)]:[off,off+cnt];
+  for(const a of ['position','normal','color']){ const at=MR.geo.attributes[a]; at.updateRange.offset=pd[0]; at.updateRange.count=pd[1]-pd[0]; at.needsUpdate=true; }
+  shadowDirty=true;
+  // l'indice (celle passanti da nascondere) è grande: si rifà al massimo 4 volte al secondo durante l'asportazione
+  if(MR.holeChg){ const now=performance.now(); if(!MR.busy||now-(MR.idxT||0)>250||MR.done>=MR.target-1e-9){ MR.holeChg=false; MR.idxT=now; rebuildIndex(); } }
   if(MR.side){ const SP=MR.side.attributes.position.array; MR.perim.forEach((idx,q)=>{ SP[q*6+2]=Z[idx]; }); MR.side.attributes.position.needsUpdate=true; }
 }
 function kernelFor(tool){
@@ -2080,7 +2665,9 @@ function toast(t,opt={}){
   let el=$('.toast'); if(!el){ el=document.createElement('div'); el.className='toast'; el.setAttribute('role','status'); document.body.appendChild(el); }
   el.textContent=''; const sp=document.createElement('span'); sp.textContent=t; el.appendChild(sp);
   if(opt.undo){ const b=document.createElement('button'); b.type='button'; b.className='tbtn'; b.textContent='Annulla'; b.addEventListener('click',()=>{ el.hidden=true; undo(); }); el.appendChild(b); }
-  el.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>el.hidden=true,opt.undo?7000:4200);
+  el.hidden=false; clearTimeout(toastT);
+  const ms=opt.undo?10000:4500, arm=()=>{ clearTimeout(toastT); toastT=setTimeout(()=>el.hidden=true,ms); };
+  el.onmouseenter=()=>clearTimeout(toastT); el.onmouseleave=arm; arm();
 }
 function notify(t){ toast(t); const m=$('#gmsg'); if(m) m.textContent=t; }
 
@@ -2102,6 +2689,7 @@ $('#btnNew').addEventListener('click',()=>{
 $$('.tabs button').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.tab)));
 $$('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
 $('#btnFit').addEventListener('click',fitView);
+$('#btnHQ').addEventListener('click',()=>setHQ(!HQ));
 $('#btnHelp').addEventListener('click',()=>{ const h=$('#help'); h.hidden=!h.hidden; });
 function firstHint(){ const h=$('#hint'); if(!h.hidden) return; h.textContent='Trascina per ruotare · rotella per lo zoom · ? per tutti i comandi'; h.hidden=false; setTimeout(()=>{ if(h.textContent.startsWith('Trascina per ruotare')) updDrawUI(); },6000); }
 $$('[data-tool]').forEach(b=>b.addEventListener('click',()=>{ if(view!=='top') setView('top',false); setTool(b.dataset.tool); }));
@@ -2119,7 +2707,7 @@ $$('[data-show]').forEach(b=>b.addEventListener('click',()=>{ const k=b.dataset.
   else S=sampleState();
   deriveTools();
   if(S.modelKind==='sample'){ model={tris:CAM.sampleModel(),name:S.modelName}; model.fid=CAM.groupFaces(model.tris); model.bb=bboxTris(model.tris); model.ver=++modelVer; }
-  resize(); setTool('select'); setView('iso'); setTab(S.ops.length||S.modelKind!=='none'?'ops':'stock');
+  applyHQ(); resize(); setTool('select'); setView('iso'); setTab(S.ops.length||S.modelKind!=='none'?'ops':'stock');
   rebuildAll(); fitView(); generate(); histReset();
   if(restoreModelLater) idbGet('model').then(m=>{
     if(m&&m.tris&&m.tris.length){ model={tris:m.tris,fid:m.fid||CAM.groupFaces(m.tris),name:m.name}; model.bb=bboxTris(model.tris); model.ver=++modelVer; idbTris=model.tris;
